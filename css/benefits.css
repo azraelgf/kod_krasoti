@@ -1,0 +1,44 @@
+.benefits {
+    display: flex;
+    gap: 1.25rem
+}
+.benefits__item {
+    padding: 1.875rem;
+    flex: 1 1 auto;
+    border-radius: .9375rem;
+    border: 1px solid #f1eff2
+}
+.benefits__top {
+    display: flex;
+    align-items: center;
+    gap: 1.625rem;
+    margin-bottom: .8125rem
+}
+.benefits__top-icon {
+    flex: 0 0 2.8125rem
+}
+.benefits__info {
+    color: #6c6c6c;
+    line-height: 1.3
+}
+@media (max-width:61.99875em) {
+    .benefits {
+        flex-wrap: wrap
+    }
+}
+@media (max-width:29.99875em) {
+    .benefits__item {
+        padding: .625rem 1rem
+    }
+    .benefits__top {
+        flex-wrap: wrap;
+        gap: .625rem;
+        margin-bottom: .625rem
+    }
+    .benefits__top strong {
+        flex: 1 1 100%
+    }
+    .benefits__top-icon {
+        flex: 0 0 2rem
+    }
+}

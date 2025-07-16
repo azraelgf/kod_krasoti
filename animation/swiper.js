@@ -3873,22 +3873,22 @@
                 }
             }
         }, {
-            selector: ".cosmetologist__body",
+            selector: ".product-slider__body",
             modules: [ Pagination, Navigation ],
             options: {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
                 navigation: {
-                    prevEl: ".cosmetologist-btn-prev",
-                    nextEl: ".cosmetologist-btn-next"
+                    prevEl: ".popular-btn-prev",
+                    nextEl: ".popular-btn-next"
                 },
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true
                 },
                 breakpoints: {
-                    320: {
+                    360: {
                         slidesPerView: 1.2,
                         spaceBetween: 20,
                         autoHeight: true
@@ -3916,6 +3916,96 @@
                 }
             }
         }, {
+            selector: ".cosmetologist__body",
+            modules: [ Pagination, Navigation ],
+            options: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                navigation: {
+                    prevEl: ".cosmetologist-btn-prev",
+                    nextEl: ".cosmetologist-btn-next"
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    360: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20,
+                        autoHeight: true
+                    },
+                    480: {
+                        slidesPerView: 1.8,
+                        spaceBetween: 20
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2.7,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1268: {
+                        slidesPerView: 4,
+                        spaceBetween: 20
+                    }
+                }
+            }
+        }, {
+            selector: ".services__body",
+            modules: [ Pagination, Navigation ],
+            options: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                navigation: {
+                    prevEl: ".services-btn-prev",
+                    nextEl: ".services-btn-next"
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    360: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                        autoHeight: true
+                    },
+                    480: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20
+                    },
+                    640: {
+                        slidesPerView: 1.4,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 1.7,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 20
+                    },
+                    1268: {
+                        slidesPerView: 2.6,
+                        spaceBetween: 20
+                    },
+                    1430: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                }
+            }
+        }, {
             selector: ".study__body",
             modules: [ Pagination, Navigation ],
             options: {
@@ -3923,8 +4013,8 @@
                 spaceBetween: 20,
                 speed: 800,
                 navigation: {
-                    prevEl: ".study-btn-prev",
-                    nextEl: ".study-btn-next"
+                    prevEl: ".services-btn-prev",
+                    nextEl: ".services-btn-next"
                 },
                 pagination: {
                     el: ".swiper-pagination",
@@ -3947,7 +4037,7 @@
                     clickable: true
                 },
                 breakpoints: {
-                    320: {
+                    360: {
                         slidesPerView: 1,
                         spaceBetween: 20,
                         autoHeight: true
@@ -3975,78 +4065,6 @@
                 }
             }
         } ];
-        const servicesSliderEl = document.querySelector(".services__body");
-        if (servicesSliderEl) {
-            const prevBtn = document.querySelector(".services-btn-prev");
-            const nextBtn = document.querySelector(".services-btn-next");
-            if (prevBtn && nextBtn) {
-                prevBtn.style.opacity = "0";
-                nextBtn.style.opacity = "0";
-                prevBtn.style.transition = nextBtn.style.transition = "opacity 0.3s ease";
-                let hideTimeout;
-                new Swiper(servicesSliderEl, {
-                    modules: [ Pagination, Navigation ],
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    speed: 800,
-                    observer: true,
-                    observeParents: true,
-                    navigation: {
-                        prevEl: prevBtn,
-                        nextEl: nextBtn
-                    },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                            autoHeight: true
-                        },
-                        480: {
-                            slidesPerView: 1.2,
-                            spaceBetween: 20
-                        },
-                        640: {
-                            slidesPerView: 1.4,
-                            spaceBetween: 20
-                        },
-                        768: {
-                            slidesPerView: 1.7,
-                            spaceBetween: 20
-                        },
-                        992: {
-                            slidesPerView: 2.3,
-                            spaceBetween: 20
-                        },
-                        1268: {
-                            slidesPerView: 2.6,
-                            spaceBetween: 20
-                        },
-                        1430: {
-                            slidesPerView: 3,
-                            spaceBetween: 20
-                        }
-                    },
-                    on: {
-                        touchMove: () => {
-                            clearTimeout(hideTimeout);
-                            prevBtn.style.opacity = "1";
-                            nextBtn.style.opacity = "1";
-                        },
-                        touchEnd: () => {
-                            clearTimeout(hideTimeout);
-                            hideTimeout = setTimeout((() => {
-                                prevBtn.style.opacity = "0";
-                                nextBtn.style.opacity = "0";
-                            }), 1e3);
-                        }
-                    }
-                });
-            }
-        }
         sliders.forEach((({selector, modules, options}) => {
             const elements = document.querySelectorAll(selector);
             if (!elements.length) return;
@@ -4058,60 +4076,6 @@
                     ...options
                 });
             }));
-        }));
-        document.querySelectorAll(".product-slider__body").forEach(((el, index) => {
-            const prevClass = `popular-btn-prev-${index}`;
-            const nextClass = `popular-btn-next-${index}`;
-            const pagClass = `swiper-pagination-${index}`;
-            const prevBtn = el.closest(".product-slider")?.querySelector(".popular-btn-prev");
-            const nextBtn = el.closest(".product-slider")?.querySelector(".popular-btn-next");
-            const paginationEl = el.closest(".product-slider")?.querySelector(".swiper-pagination");
-            if (prevBtn) prevBtn.classList.add(prevClass);
-            if (nextBtn) nextBtn.classList.add(nextClass);
-            if (paginationEl) paginationEl.classList.add(pagClass);
-            new Swiper(el, {
-                modules: [ Pagination, Navigation ],
-                slidesPerView: 1,
-                spaceBetween: 0,
-                speed: 800,
-                observer: true,
-                observeParents: true,
-                navigation: {
-                    prevEl: `.${prevClass}`,
-                    nextEl: `.${nextClass}`
-                },
-                pagination: {
-                    el: `.${pagClass}`,
-                    clickable: true
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1.2,
-                        spaceBetween: 20,
-                        autoHeight: true
-                    },
-                    480: {
-                        slidesPerView: 1.8,
-                        spaceBetween: 20
-                    },
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20
-                    },
-                    768: {
-                        slidesPerView: 2.7,
-                        spaceBetween: 20
-                    },
-                    992: {
-                        slidesPerView: 3,
-                        spaceBetween: 20
-                    },
-                    1268: {
-                        slidesPerView: 4,
-                        spaceBetween: 20
-                    }
-                }
-            });
         }));
         document.querySelectorAll(".slider-img__body").forEach((sliderEl => {
             const swiper = new Swiper(sliderEl, {
