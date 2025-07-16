@@ -1,0 +1,163 @@
+.services-items__wrapper {
+    display: grid;
+    gap: 6.25rem
+}
+.services-items__menu-mobile {
+    margin-bottom: 1.25rem
+}
+.item-service__img {
+    margin-bottom: 1.75rem
+}
+.item-service__img img {
+    border-radius: 1.125rem
+}
+.item-service__top {
+    display: grid;
+    gap: 1.0625rem;
+    align-items: center;
+    margin-bottom: 1.875rem
+}
+.item-service__title {
+    font-weight: 500;
+    font-size: 1.75rem
+}
+.item-service__btn {
+    min-width: 13.125rem
+}
+.item-service__text {
+    font-size: 1rem;
+    max-width: 49.5rem;
+    line-height: 1.35
+}
+.item-service__subcategories {
+    display: grid;
+    gap: 1.25rem
+}
+.subcategory-service {
+    display: flex;
+    flex-direction: column;
+    gap: .9375rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid #000
+}
+.subcategory-service__title {
+    font-size: 1.25rem
+}
+.subcategory-service__info {
+    display: flex;
+    gap: .625rem;
+    flex-wrap: wrap
+}
+.subcategory-service__text {
+    font-size: 1rem;
+    line-height: 1.35
+}
+.services-menu {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: .3125rem 0;
+    background-color: #fff
+}
+.services-menu__title {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    min-height: 3.0625rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .625rem 1.25rem;
+    background-color: var(--primary);
+    color: #fff;
+    text-align: left;
+    border-radius: .9375rem
+}
+.services-menu__title svg {
+    width: .875rem;
+    height: .5rem;
+    transition: rotate .3s ease-in-out
+}
+._active-menu .services-menu__title svg {
+    rotate: 180deg
+}
+.services-menu__body {
+    padding: 1.375rem 0;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    border-radius: 0 0 .625rem .625rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .3s ease-in-out
+}
+._active-menu .services-menu__body {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto
+}
+.services-menu__item {
+    padding: .625rem 0;
+    font-weight: 600;
+    font-size: 1rem
+}
+@media (min-width:29.99875em) {
+    .services-items__menu-mobile {
+        display: none
+    }
+    .item-service__top {
+        grid-template-columns: 1fr 13.0625rem
+    }
+    .item-service__text {
+        grid-column: span 2
+    }
+}
+@media (min-width:47.99875em) {
+    .item-service__subcategories {
+        grid-template-columns: repeat(2,1fr)
+    }
+}
+@media (max-width:61.99875em) {
+    .services-items__wrapper {
+        gap: 4.6875rem
+    }
+}
+@media (max-width:47.99875em) {
+    .services-items__wrapper {
+        gap: 3.4375rem
+    }
+    .item-service__top {
+        gap: .9375rem
+    }
+    .item-service__title {
+        font-size: 1.5rem
+    }
+    .item-service__text {
+        font-size: .875rem
+    }
+    .subcategory-service__title {
+        font-size: 1.125rem
+    }
+    .subcategory-service__text {
+        font-size: .875rem
+    }
+}
+@media (max-width:29.99875em) {
+    .item-service__img {
+        margin-bottom: 1.5625rem
+    }
+    .item-service__img img {
+        border-radius: .9375rem
+    }
+    .item-service__btn {
+        min-width: 100%;
+        grid-row: 3
+    }
+    .subcategory-service {
+        border-width: 1px
+    }
+}
