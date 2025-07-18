@@ -3974,6 +3974,41 @@
                     }
                 }
             }
+        }, {
+            selector: ".product-categories__body",
+            modules: [ Pagination ],
+            options: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 3.2,
+                        spaceBetween: 15,
+                        autoHeight: true
+                    },
+                    480: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 7,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 10,
+                        spaceBetween: 20
+                    },
+                    1268: {
+                        slidesPerView: 12,
+                        spaceBetween: 20
+                    }
+                }
+            }
         } ];
         const servicesSliderEl = document.querySelector(".services__body");
         if (servicesSliderEl) {

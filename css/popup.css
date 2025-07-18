@@ -1,0 +1,111 @@
+.popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 30px 10px;
+    visibility: hidden
+}
+.popup.popup_filter {
+    padding: 0
+}
+.popup.popup_show {
+    opacity: 1;
+    pointer-events: auto
+}
+.popup.popup_filter .popup__content {
+    left: -100%;
+    opacity: 0;
+    transition: left .3s ease,opacity .3s ease
+}
+.popup.popup_show.popup_filter .popup__content {
+    left: 0;
+    opacity: 1
+}
+.popup-overlay {
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 149
+}
+.popup-show .popup-overlay {
+    opacity: 1;
+    pointer-events: auto
+}
+.popup_show {
+    z-index: 150;
+    visibility: visible;
+    overflow: auto;
+    pointer-events: auto
+}
+.popup_show .popup__content {
+    visibility: visible
+}
+.popup__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    flex: 1 1 auto;
+    width: 100%;
+    justify-content: center
+}
+.popup_filter .popup__wrapper {
+    align-items: flex-end;
+    justify-content: stretch;
+    height: 100%
+}
+.popup__content {
+    visibility: hidden;
+    transition: -webkit-transform .3s ease 0s;
+    transition: transform .3s ease 0s;
+    transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px
+}
+.lock .popup__content {
+    visibility: visible
+}
+.popup_filter .popup__content {
+    min-height: 100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-radius: 1.25rem 0 0 1.25rem;
+    max-width: 40vw
+}
+.popup__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem
+}
+.popup__close {
+    width: 1.125rem;
+    height: 1.125rem
+}
+@media (min-width:74.99875em) {
+    .popup_filter .popup__content {
+        max-width: 30vw
+    }
+}
+@media (max-width:61.99875em) {
+    .popup_filter .popup__content {
+        max-width: 70vw
+    }
+}
+@media (max-width:29.99875em) {
+    .popup_filter .popup__content {
+        max-width: 100%;
+        border-radius: 0
+    }
+}

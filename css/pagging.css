@@ -1,0 +1,56 @@
+.pagging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem
+}
+.pagging__arrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.pagging__arrow-next {
+    rotate: -90deg
+}
+.pagging__arrow-prev {
+    rotate: 90deg
+}
+.pagging__arrow svg {
+    width: .625rem;
+    height: .3125rem
+}
+.pagging__list {
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+.pagging__item {
+    font-weight: 500;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out
+}
+.pagging__item._active {
+    color: #fff;
+    background-color: var(--accent)
+}
+@media (max-width:29.99875em) {
+    .pagging {
+        gap: .3125rem
+    }
+    .pagging__list {
+        gap: .3125rem
+    }
+}
+@media (any-hover:hover) {
+    .pagging__item:hover {
+        color: #fff;
+        background-color: var(--accent)
+    }
+}

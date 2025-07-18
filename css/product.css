@@ -51,6 +51,9 @@
 [data-rating=set] .rating__input {
     cursor: pointer
 }
+.product {
+    min-width: 0
+}
 .product__body {
     display: grid;
     gap: .875rem;
@@ -75,8 +78,9 @@
 }
 .product__rating {
     display: flex;
-    gap: 1.25rem;
-    align-items: center
+    gap: .3125rem 1.25rem;
+    align-items: center;
+    flex-wrap: wrap
 }
 .product__generator {
     color: #6c6c6c
@@ -190,8 +194,20 @@
     .product__title {
         font-size: 1rem
     }
+    .catalog__items .product__title {
+        font-size: .9375rem
+    }
     .product__title small {
         font-size: .875rem
+    }
+    .catalog__items .product__title small {
+        font-size: .75rem
+    }
+    .catalog__items .product__generator {
+        font-size: .75rem
+    }
+    .catalog__items .product__price {
+        font-size: 1rem
     }
     .product__buy {
         width: 2rem;
@@ -204,6 +220,9 @@
     }
     .slider-img__slide {
         min-height: 16.875rem
+    }
+    .catalog__items .slider-img__slide {
+        min-height: 10.625rem
     }
     .stock {
         font-size: .75rem

@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Marcellus&display=swap);
+@font-face {
+    font-family: Nagel;
+    font-display: swap;
+    src: url(../fonts/Nagel.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal
+}
+.checkbox {
+    position: relative
+}
+.checkbox__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0
+}
+.checkbox__input:checked+.checkbox__label:before {
+    background: var(--primary);
+    border-color: var(--primary)
+}
+.checkbox__input:checked+.checkbox__label:after {
+    scale: 1
+}
+.checkbox__label {
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    gap: 10px
+}
+.checkbox__label:before {
+    content: "";
+    align-self: flex-start;
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #b0a6bd;
+    border-radius: 3px
+}
+.checkbox__label::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: .875rem;
+    top: .0625rem;
+    left: .0625rem;
+    scale: 0;
+    background: url(../img/icons/check.svg) no-repeat center/contain;
+    transition: scale .3s ease-in-out
+}
+.checkbox__text {
+    align-self: center
+}
