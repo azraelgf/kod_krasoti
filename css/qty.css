@@ -1,0 +1,65 @@
+.quantity {
+    width: 160px;
+    height: 51px;
+    display: flex
+}
+.quantity__button {
+    flex: 0 0 51px;
+    position: relative;
+    cursor: pointer;
+    background-color: #f4f3f5;
+    border-radius: .875rem;
+    transition: background-color .3s ease-in-out
+}
+.quantity__button::after,
+.quantity__button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all .3s ease 0s;
+    margin: 0 0 0 -4.5px;
+    background-color: var(--primary);
+    width: 9px;
+    height: 1px
+}
+.quantity__button_plus::before {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+.quantity__input {
+    flex: 1 1 auto;
+    font-size: 1rem;
+    font-weight: 600
+}
+.quantity__input input {
+    height: 100%;
+    color: var(--primary);
+    width: 100%;
+    text-align: center
+}
+@media (max-width:47.99875em) {
+    .quantity {
+        width: 7.5rem;
+        height: 3.0625rem
+    }
+    .cart-item .quantity {
+        height: 2.1875rem;
+        width: 6.25rem
+    }
+    .quantity__button {
+        flex: 0 0 42px
+    }
+    .cart-item .quantity__button {
+        flex: 0 0 35px
+    }
+}
+@media (any-hover:hover) {
+    .quantity__button:hover {
+        background-color: var(--primary)
+    }
+    .quantity__button:hover::after,
+    .quantity__button:hover::before {
+        background-color: #fff
+    }
+}

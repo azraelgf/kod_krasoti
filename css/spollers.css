@@ -1,0 +1,68 @@
+.spollers {
+    display: grid;
+    gap: 10px
+}
+.spollers__item {
+    font-size: 1rem
+}
+.spollers__title {
+    width: 100%;
+    cursor: default;
+    text-align: left;
+    border-bottom: 2px solid #f4f3f5;
+    padding: 1rem 1.25rem .625rem .625rem;
+    position: relative;
+    list-style: none;
+    transition: all .3s ease-in-out
+}
+.spollers__title::-webkit-details-marker,
+.spollers__title::marker {
+    display: none
+}
+._spoller-init .spollers__title {
+    cursor: pointer
+}
+._spoller-init .spollers__title::after,
+._spoller-init .spollers__title::before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background-color: #000;
+    height: 1px;
+    width: 8px;
+    transition: -webkit-transform .5s ease 0s;
+    transition: transform .5s ease 0s;
+    transition: transform .5s ease 0s,-webkit-transform .5s ease 0s
+}
+._spoller-init .spollers__title::before {
+    -webkit-transform: translate(-75%,-50%) rotate(40deg);
+    transform: translate(-75%,-50%) rotate(40deg)
+}
+._spoller-init .spollers__title::after {
+    -webkit-transform: translate(0,-50%) rotate(-40deg);
+    transform: translate(0,-50%) rotate(-40deg)
+}
+._spoller-init .spollers__title._spoller-active {
+    border-color: transparent
+}
+._spoller-init .spollers__title._spoller-active::before {
+    -webkit-transform: translateX(-75%) rotate(-40deg);
+    transform: translateX(-75%) rotate(-40deg)
+}
+._spoller-init .spollers__title._spoller-active::after {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg)
+}
+.spollers__body {
+    padding: .625rem;
+    line-height: 1.3
+}
+.spollers__body p+p {
+    margin-top: .625rem
+}
+@media (max-width:29.99875em) {
+    .spollers__item {
+        font-size: .875rem
+    }
+}

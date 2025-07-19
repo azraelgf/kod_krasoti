@@ -17,6 +17,7 @@
     --green: #41AD49;
     --red: #d30707;
     --grey: #6C6C6C;
+    --border: #F1EFF2;
     --bg-primary: #F8F8F8;
     --bg-secondary: #F7F7F7;
     --bg-third: #F5F5F5;
@@ -133,17 +134,18 @@ h6 {
     position: relative;
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
     gap: 1.25rem;
     background-color: var(--primary);
     color: #fff;
     border-radius: .9375rem;
-    padding: .25rem .25rem .25rem 1.25rem;
+    padding: .25rem 3.5rem .25rem 1.25rem;
     font-weight: 600;
     font-size: 1rem;
     min-height: 3.1875rem;
     line-height: 1.2;
-    transition: background-color .3s ease-in-out,color .3s ease-in-out
+    transition: background-color .3s ease-in-out,color .3s ease-in-out;
+    text-align: center;
+    justify-content: center
 }
 .button i {
     color: var(--primary);
@@ -155,7 +157,11 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color .3s ease-in-out,color .3s ease-in-out
+    transition: background-color .3s ease-in-out,color .3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    translate: -.25rem -50%
 }
 .button svg {
     width: 1.25rem;
@@ -187,14 +193,19 @@ h6 {
 }
 .button_more {
     min-width: 100%;
-    border: 2px solid #f1eff2;
+    border: 2px solid var(--border);
     justify-content: center;
     background-color: rgba(0,0,0,0);
     color: var(--primary);
-    gap: 1.1875rem
+    gap: 1.1875rem;
+    padding: .25rem 1.25rem
 }
 .button_more svg {
     rotate: 90deg
+}
+.button_cart svg {
+    width: 1.375rem;
+    height: 1.375rem
 }
 .button.filter__more {
     min-height: 2.8125rem
@@ -222,6 +233,11 @@ textarea {
     display: block;
     padding: 0 20px;
     caret-color: inherit
+}
+.form__row .input {
+    border: 2px solid #f4f3f5;
+    height: 3.1875rem;
+    font-size: .875rem
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
     -webkit-transition: opacity .3s;
@@ -310,6 +326,9 @@ textarea.input {
     font-weight: 400;
     line-height: 1.15
 }
+.title.title_h2 {
+    font-size: 2rem
+}
 .container {
     position: relative;
     z-index: 2
@@ -358,6 +377,10 @@ textarea.input {
     position: relative;
     z-index: 3;
     padding: 0
+}
+.section.section_bottom {
+    padding-top: 0;
+    padding-bottom: 8.4375rem
 }
 .bg-primary {
     background-color: var(--bg-primary)
@@ -422,6 +445,40 @@ textarea.input {
     background: #f1f1f1;
     border-radius: 4px
 }
+.stock {
+    display: flex;
+    align-items: center;
+    gap: .3125rem;
+    color: var(--green);
+    flex-wrap: wrap
+}
+.stock_on {
+    color: var(--green)
+}
+.stock_off {
+    color: var(--black);
+    opacity: .6
+}
+.stock__icon svg {
+    width: .875rem;
+    height: .875rem
+}
+.beige {
+    font-size: .75rem;
+    border-radius: .5rem;
+    padding: .5625rem .75rem;
+    font-weight: 600;
+    display: inline-flex
+}
+.beige_new {
+    background-color: var(--bg-new)
+}
+.beige_sale {
+    background-color: var(--bg-sale)
+}
+.beige_top {
+    background-color: var(--bg-top)
+}
 @media (min-width:98.375em) {
     .container,
     [class*=__container] {
@@ -458,6 +515,9 @@ textarea.input {
     .title {
         font-size: 1.875rem
     }
+    .title.title_h2 {
+        font-size: 1.875rem
+    }
     .text {
         font-size: 1rem
     }
@@ -473,21 +533,14 @@ textarea.input {
         min-height: 3.0625rem;
         font-size: .875rem;
         gap: .625rem;
-        min-width: 100%;
-        text-align: center;
-        justify-content: center;
-        padding-right: 2.6875rem
+        min-width: 100%
     }
     .item-services__img .button {
         min-width: initial
     }
     .button i {
         width: 2.5625rem;
-        height: 2.5625rem;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        translate: -.25rem -50%
+        height: 2.5625rem
     }
     .button_grey {
         padding: 1.0625rem .625rem
@@ -503,8 +556,21 @@ textarea.input {
         position: relative;
         translate: 0 0
     }
+    .button.info-product__btn {
+        min-width: initial
+    }
+    .form__row .input {
+        height: 2.8125rem;
+        font-size: .75rem
+    }
     .title {
         font-size: 1.5rem
+    }
+    .title.title_h2 {
+        font-size: 1.5rem
+    }
+    .section {
+        padding: 3.125rem 0
     }
     .section__container {
         padding: 0
@@ -515,12 +581,22 @@ textarea.input {
     .section.section_keywords {
         padding: 3.125rem 0
     }
+    .section.section_bottom {
+        padding-bottom: 3.4375rem
+    }
     .top-section__btn {
         order: 3;
         flex: 1 1 100%
     }
     .item-services__img .btns-group {
         gap: .625rem
+    }
+    .stock {
+        font-size: .75rem
+    }
+    .stock__icon svg {
+        width: .75rem;
+        height: .75rem
     }
 }
 @media (max-width:22.5em) {

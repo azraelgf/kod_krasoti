@@ -1,0 +1,34 @@
+.form .form__inner {
+    display: grid;
+    gap: 1.875rem
+}
+.form__row.form__row_radio {
+    display: flex;
+    gap: 1.25rem
+}
+.form__label {
+    font-size: 1rem;
+    margin-bottom: .625rem
+}
+@media (min-width:61.99875em) {
+    .form {
+        max-width: 51.25rem
+    }
+    .form__row.form__row_radio {
+        max-width: 31.25rem;
+        justify-content: space-between
+    }
+}
+@media (max-width:47.99875em) {
+    .form .form__inner {
+        gap: .9375rem
+    }
+    .form__label {
+        font-size: .875rem
+    }
+}
+@media (max-width:29.99875em) {
+    .form__row.form__row_radio {
+        flex-direction: column
+    }
+}
