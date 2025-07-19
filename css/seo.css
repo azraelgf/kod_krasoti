@@ -20,21 +20,37 @@
 }
 .seo-block__more {
     margin-top: 1.25rem;
-    position: relative
+    position: relative;
+    padding: 0 .625rem;
+    border-radius: .625rem;
+    border: 1px solid #f1eff2;
+    min-height: 3.1875rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 13.75rem;
+    transition: background-color .3s ease-in-out,color .3s ease-in-out
 }
 .seo-block__more::before {
     rotate: 90deg;
     content: "";
-    position: absolute;
     width: 1.25rem;
     height: .625rem;
-    top: 50%;
-    left: 100%;
-    translate: .625rem -50%;
     background: url(../img/icons/arrow.svg) no-repeat center/contain;
     transition: rotate .3s ease-in-out
 }
 ._showmore-active .seo-block__more::before {
+    rotate: -90deg
+}
+.seo-block__more::after {
+    rotate: 90deg;
+    content: "";
+    width: 1.25rem;
+    height: .625rem;
+    background: url(../img/icons/arrow.svg) no-repeat center/contain;
+    transition: rotate .3s ease-in-out
+}
+._showmore-active .seo-block__more::after {
     rotate: -90deg
 }
 @media (min-width:98.375em) {
@@ -54,6 +70,9 @@
     .seo-block__content {
         gap: 1rem
     }
+    .seo-block__more {
+        min-width: 100%
+    }
 }
 @media (max-width:22.5em) {
     ._showmore-active .seo-block__content {
@@ -63,5 +82,10 @@
 @media (min-width:22.5em)and (max-width:98.375em) {
     ._showmore-active .seo-block__content {
         margin-top: clamp(.75rem ,.6017298188rem + .6589785832vw ,1.25rem)
+    }
+}
+@media (any-hover:hover) {
+    .seo-block__more:hover {
+        background-color: #f1eff2
     }
 }
