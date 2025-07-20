@@ -20,10 +20,11 @@
 }
 .seo-block__more {
     margin-top: 1.25rem;
+    font-weight: 500;
     position: relative;
-    padding: 0 .625rem;
+    padding: .625rem;
     border-radius: .625rem;
-    border: 1px solid #f1eff2;
+    border: 2px solid var(--border);
     min-height: 3.1875rem;
     display: inline-flex;
     justify-content: space-between;
@@ -86,6 +87,11 @@
 }
 @media (any-hover:hover) {
     .seo-block__more:hover {
-        background-color: #f1eff2
+        background-color: var(--primary);
+        color: #fff
+    }
+    .seo-block__more:hover:after,
+    .seo-block__more:hover:before {
+        background: url(../img/icons/arrow_white.svg) no-repeat center/contain
     }
 }
