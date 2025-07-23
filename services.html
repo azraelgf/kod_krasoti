@@ -33,7 +33,7 @@
 
 <body>
 <div class="wrapper">
-	<header class="header">
+	<header class="header" data-scroll="300" data-scroll-show="800  ">
 		<div class="header__top top-header">
 			<div class="top-header__container">
 				<div class="top-header__menu menu">
@@ -57,175 +57,177 @@
 				</div>
 			</div>
 		</div>
-		<div class="header__middle middle-header">
-			<div class="middle-header__container">
-				<a href="/" class="middle-header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
-				<div class="middle-header__menu middle-menu">
-					<ul class="middle-menu__list">
-						<li class="middle-menu__item"><a href="#" class="middle-menu__link">Наши услуги</a></li>
-						<li class="middle-menu__item"><a href="#" class="middle-menu__link">Косметологи</a></li>
-						<li class="middle-menu__item"><a href="#" class="middle-menu__link">Обучение</a></li>
-					</ul>
-				</div>
-				<div class="middle-header__search">
-					<form action="#">
-						<div class="search-box">
-							<input class="search-box__input input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите запрос">
-							<button class="search-box__btn" type="submit">
-								<svg>
-									<use xlink:href="img/icons/icons.svg#search"></use>
-								</svg>
-							</button>
-						</div>
-					</form>
-				</div>
-				<div class="middle-header__links links-middle">
-					<a href="" class="links-middle__link _link-heart">
-						<svg>
-							<use xlink:href="img/icons/icons.svg#heart"></use>
-						</svg>
-					</a>
-					<a href="" class="links-middle__link">
-						<svg>
-							<use xlink:href="img/icons/icons.svg#user"></use>
-						</svg>
-					</a>
-					<div class="links-middle__link links-middle__link_cart">
-						<a href="" class="cart-header">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#cart"></use>
-							</svg>
-							<span class="cart-header__info">
-									<strong>0 byn</strong>
-									<small>Корзина пуста</small>
-								</span>
-						</a>
-						<div class="cart-header__content content-cart">
-							<div class="content-cart__top">
-								<div class="content-cart__title">В корзине 3 товара</div>
-								<a href="" class="content-cart__btn">
-									<span>Перейти к оформлению</span>
+		<div class="header__sticky">
+			<div class="header__middle middle-header">
+				<div class="middle-header__container">
+					<a href="/" class="middle-header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+					<div class="middle-header__menu middle-menu">
+						<ul class="middle-menu__list">
+							<li class="middle-menu__item"><a href="#" class="middle-menu__link">Наши услуги</a></li>
+							<li class="middle-menu__item"><a href="#" class="middle-menu__link">Косметологи</a></li>
+							<li class="middle-menu__item"><a href="#" class="middle-menu__link">Обучение</a></li>
+						</ul>
+					</div>
+					<div class="middle-header__search">
+						<form action="#">
+							<div class="search-box">
+								<input class="search-box__input input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите запрос">
+								<button class="search-box__btn" type="submit">
 									<svg>
-										<use xlink:href="img/icons/icons.svg#arrow"></use>
+										<use xlink:href="img/icons/icons.svg#search"></use>
 									</svg>
-								</a>
+								</button>
 							</div>
-							<ul class="content-cart__items">
-								<li class="content-cart-item">
-									<div class="content-cart-item__img">
-										<img src="img/products/01/01.webp" alt="Image" class="ibg">
-									</div>
-									<div class="content-cart-item__body">
-										<div class="content-cart-item__title">
-											Hadat — HYDRO INTENSIVE REPAIR SHAMPOO — ВОССТАНАВЛИВАЮЩИЙ ШАМПУНЬ <small>250
-											мл.</small>
-										</div>
-										<div class="content-cart-item__price">
-											35.50 byn
-										</div>
-									</div>
-									<button class="content-cart-item__del" type="button">
+						</form>
+					</div>
+					<div class="middle-header__links links-middle">
+						<a href="" class="links-middle__link _link-heart">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#heart"></use>
+							</svg>
+						</a>
+						<a href="" class="links-middle__link">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#user"></use>
+							</svg>
+						</a>
+						<div class="links-middle__link links-middle__link_cart">
+							<a href="" class="cart-header">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#cart"></use>
+								</svg>
+								<span class="cart-header__info">
+										<strong>0 byn</strong>
+										<small>Корзина пуста</small>
+									</span>
+							</a>
+							<div class="cart-header__content content-cart">
+								<div class="content-cart__top">
+									<div class="content-cart__title">В корзине 3 товара</div>
+									<a href="" class="content-cart__btn">
+										<span>Перейти к оформлению</span>
 										<svg>
-											<use xlink:href="img/icons/icons.svg#del"></use>
+											<use xlink:href="img/icons/icons.svg#arrow"></use>
 										</svg>
-									</button>
+									</a>
+								</div>
+								<ul class="content-cart__items">
+									<li class="content-cart-item">
+										<div class="content-cart-item__img">
+											<img src="img/products/01/01.webp" alt="Image" class="ibg">
+										</div>
+										<div class="content-cart-item__body">
+											<div class="content-cart-item__title">
+												Hadat — HYDRO INTENSIVE REPAIR SHAMPOO — ВОССТАНАВЛИВАЮЩИЙ ШАМПУНЬ <small>250
+												мл.</small>
+											</div>
+											<div class="content-cart-item__price">
+												35.50 byn
+											</div>
+										</div>
+										<button class="content-cart-item__del" type="button">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#del"></use>
+											</svg>
+										</button>
+									</li>
+									<li class="content-cart-item">
+										<div class="content-cart-item__img">
+											<img src="img/products/01/01.webp" alt="Image" class="ibg">
+										</div>
+										<div class="content-cart-item__body">
+											<div class="content-cart-item__title">
+												Hadat — HYDRO INTENSIVE REPAIR SHAMPOO — ВОССТАНАВЛИВАЮЩИЙ ШАМПУНЬ <small>250
+												мл.</small>
+											</div>
+											<div class="content-cart-item__price">
+												35.50 byn
+											</div>
+										</div>
+										<button class="content-cart-item__del" type="button">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#del"></use>
+											</svg>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+					</div>
+				</div>
+
+			</div>
+			<div class="header__bottom catalog-header">
+				<div class="catalog-header__container">
+					<ul class="catalog-header__menu">
+						<li class="catalog-header__item">
+							<a href="" class="catalog-header__link catalog-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#burger"></use>
+								</svg>
+								<span>Каталог товаров</span>
+							</a>
+						</li>
+						<li class="catalog-header__item">
+							<a href="" class="catalog-header__link">
+								Для лица
+							</a>
+						</li>
+						<li class="catalog-header__item">
+							<a href="" class="catalog-header__link">
+								Для волос
+							</a>
+						</li>
+						<li class="catalog-header__item">
+							<a href="" class="catalog-header__link">
+								Для тела
+							</a>
+						</li>
+						<li class="catalog-header__item">
+							<a href="" class="catalog-header__link">
+								Уход за губами
+							</a>
+						</li>
+						<li class="catalog-header__item">
+							<a href="" class="catalog-header__link">
+								Декоративная косметика
+							</a>
+						</li>
+						<li class="catalog-header__item">
+							<a href="" class="catalog-header__link">
+								Уход за полостью рта
+							</a>
+						</li>
+						<li class="catalog-header__item">
+							<a href="" class="catalog-header__link">
+								Наборы
+							</a>
+						</li>
+						<li class="catalog-header__item catalog-header-more">
+							<a href="#" class="catalog-header__link">
+								Еще ...
+							</a>
+							<ul class="catalog-header-more__list">
+								<li class="catalog-header-more__item">
+									<a href="">Для тела</a>
 								</li>
-								<li class="content-cart-item">
-									<div class="content-cart-item__img">
-										<img src="img/products/01/01.webp" alt="Image" class="ibg">
-									</div>
-									<div class="content-cart-item__body">
-										<div class="content-cart-item__title">
-											Hadat — HYDRO INTENSIVE REPAIR SHAMPOO — ВОССТАНАВЛИВАЮЩИЙ ШАМПУНЬ <small>250
-											мл.</small>
-										</div>
-										<div class="content-cart-item__price">
-											35.50 byn
-										</div>
-									</div>
-									<button class="content-cart-item__del" type="button">
-										<svg>
-											<use xlink:href="img/icons/icons.svg#del"></use>
-										</svg>
-									</button>
+								<li class="catalog-header-more__item">
+									<a href="">Для ногтей</a>
+								</li>
+								<li class="catalog-header-more__item">
+									<a href="">Уход за кожей головы</a>
+								</li>
+								<li class="catalog-header-more__item">
+									<a href="">Профессиональная косметика</a>
+								</li>
+								<li class="catalog-header-more__item">
+									<a href="">Натуральная косметика</a>
 								</li>
 							</ul>
-						</div>
-					</div>
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
+						</li>
+					</ul>
 				</div>
-			</div>
-
-		</div>
-		<div class="header__bottom catalog-header">
-			<div class="catalog-header__container">
-				<ul class="catalog-header__menu">
-					<li class="catalog-header__item">
-						<a href="" class="catalog-header__link catalog-btn">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#burger"></use>
-							</svg>
-							<span>Каталог товаров</span>
-						</a>
-					</li>
-					<li class="catalog-header__item">
-						<a href="" class="catalog-header__link">
-							Для лица
-						</a>
-					</li>
-					<li class="catalog-header__item">
-						<a href="" class="catalog-header__link">
-							Для волос
-						</a>
-					</li>
-					<li class="catalog-header__item">
-						<a href="" class="catalog-header__link">
-							Для тела
-						</a>
-					</li>
-					<li class="catalog-header__item">
-						<a href="" class="catalog-header__link">
-							Уход за губами
-						</a>
-					</li>
-					<li class="catalog-header__item">
-						<a href="" class="catalog-header__link">
-							Декоративная косметика
-						</a>
-					</li>
-					<li class="catalog-header__item">
-						<a href="" class="catalog-header__link">
-							Уход за полостью рта
-						</a>
-					</li>
-					<li class="catalog-header__item">
-						<a href="" class="catalog-header__link">
-							Наборы
-						</a>
-					</li>
-					<li class="catalog-header__item catalog-header-more">
-						<a href="#" class="catalog-header__link">
-							Еще ...
-						</a>
-						<ul class="catalog-header-more__list">
-							<li class="catalog-header-more__item">
-								<a href="">Для тела</a>
-							</li>
-							<li class="catalog-header-more__item">
-								<a href="">Для ногтей</a>
-							</li>
-							<li class="catalog-header-more__item">
-								<a href="">Уход за кожей головы</a>
-							</li>
-							<li class="catalog-header-more__item">
-								<a href="">Профессиональная косметика</a>
-							</li>
-							<li class="catalog-header-more__item">
-								<a href="">Натуральная косметика</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
 			</div>
 		</div>
 		<!--before 992 - hidden -->
