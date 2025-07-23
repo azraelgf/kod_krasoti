@@ -261,6 +261,7 @@
     line-height: 1.3
 }
 .menu-fixed {
+    box-shadow: 0 -2px 8px 0 rgba(65,111,121,.14);
     padding: .625rem;
     position: fixed;
     width: 100%;
@@ -499,16 +500,13 @@
     .links-middle {
         gap: 1.25rem
     }
-    .links-middle__link._link-heart {
-        display: none
-    }
 }
 @media (max-width:61.99875em)and (any-hover:none) {
     .icon-menu {
         cursor: default
     }
 }
-@media (max-width:47.99875em) {
+@media (max-width:48.12375em) {
     .middle-header__search {
         background-color: #fcfcff;
         padding: .625rem 1.25rem;

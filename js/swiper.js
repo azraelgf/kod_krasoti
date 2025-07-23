@@ -3909,7 +3909,7 @@
                         slidesPerView: 3,
                         spaceBetween: 20
                     },
-                    1268: {
+                    1200: {
                         slidesPerView: 4,
                         spaceBetween: 20
                     }
@@ -3968,7 +3968,7 @@
                         slidesPerView: 2.3,
                         spaceBetween: 20
                     },
-                    1268: {
+                    1200: {
                         slidesPerView: 3,
                         spaceBetween: 20
                     }
@@ -4015,10 +4015,10 @@
             const prevBtn = document.querySelector(".services-btn-prev");
             const nextBtn = document.querySelector(".services-btn-next");
             if (prevBtn && nextBtn) {
+                let touched = false;
                 prevBtn.style.opacity = "0";
                 nextBtn.style.opacity = "0";
                 prevBtn.style.transition = nextBtn.style.transition = "opacity 0.3s ease";
-                let hideTimeout;
                 new Swiper(servicesSliderEl, {
                     modules: [ Pagination, Navigation ],
                     slidesPerView: 1,
@@ -4066,17 +4066,12 @@
                         }
                     },
                     on: {
-                        touchMove: () => {
-                            clearTimeout(hideTimeout);
-                            prevBtn.style.opacity = "1";
-                            nextBtn.style.opacity = "1";
-                        },
-                        touchEnd: () => {
-                            clearTimeout(hideTimeout);
-                            hideTimeout = setTimeout((() => {
-                                prevBtn.style.opacity = "0";
-                                nextBtn.style.opacity = "0";
-                            }), 1e3);
+                        touchStart: () => {
+                            if (!touched) {
+                                touched = true;
+                                prevBtn.style.opacity = "1";
+                                nextBtn.style.opacity = "1";
+                            }
                         }
                     }
                 });
@@ -4111,6 +4106,7 @@
                 speed: 800,
                 observer: true,
                 observeParents: true,
+                loop: true,
                 navigation: {
                     prevEl: `.${prevClass}`,
                     nextEl: `.${nextClass}`

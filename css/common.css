@@ -398,9 +398,6 @@ textarea.input {
 .section__top {
     margin-bottom: 3.75rem
 }
-.section__block {
-    max-width: 67.875rem
-}
 .section__block:not(:last-child) {
     margin-bottom: 1.625rem
 }
@@ -471,11 +468,11 @@ textarea.input {
 .scrollable {
     scrollbar-width: thin;
     scrollbar-color: #bf9d6e #f1f1f1;
-    padding-right: .3125rem;
     max-height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
-    scrollbar-gutter: stable
+    scrollbar-gutter: stable;
+    margin-right: -.625rem
 }
 .scrollable.filter__items {
     max-height: calc(100vh - 13.125rem)
@@ -531,12 +528,25 @@ textarea.input {
         padding: 0 3.75rem
     }
     .section__title {
-        margin-bottom: 3.75rem
+        margin-bottom: 3.375rem
+    }
+    .section__block {
+        max-width: 67.875rem
     }
 }
 @media (max-width:74.99875em) {
+    .button.filter__more i {
+        position: relative;
+        translate: 0 0
+    }
     .button.filter__more {
-        padding: .25rem
+        padding: 0;
+        min-height: 2.8125rem;
+        flex: 0 0 2.8125rem
+    }
+    .button.filter__more i {
+        background-color: var(--primary);
+        color: #fff
     }
 }
 @media (max-width:61.99875em) {
@@ -545,19 +555,11 @@ textarea.input {
         width: 2.25rem;
         height: 2.25rem
     }
-    .button.filter__more {
-        padding: 0;
-        min-height: 2.25rem
-    }
-    .button.filter__more i {
-        background-color: var(--primary);
-        color: #fff
-    }
     .title {
         font-size: 2.25rem
     }
 }
-@media (max-width:47.99875em) {
+@media (max-width:48.12375em) {
     .title {
         font-size: 1.875rem
     }
@@ -594,19 +596,12 @@ textarea.input {
     .button_more {
         min-height: 3.0625rem
     }
-    .item-services__btns .button {
-        padding-right: .25rem
-    }
-    .item-services__btns .button i {
-        position: static;
-        translate: 0 0
-    }
     .item-services__btns .button.button_grey {
         padding-right: .625rem
     }
-    .button.filter__more i {
-        position: relative;
-        translate: 0 0
+    .button.filter__more {
+        flex: 0 0 2.25rem;
+        min-height: 2.25rem
     }
     .button.info-product__btn {
         min-width: initial
@@ -641,7 +636,8 @@ textarea.input {
         flex: 1 1 100%
     }
     .item-services__img .btns-group {
-        gap: .625rem
+        gap: .625rem;
+        width: 100%
     }
     .stock {
         font-size: .75rem
@@ -658,17 +654,35 @@ textarea.input {
 }
 @media (min-width:22.5em)and (max-width:98.375em) {
     .section__title {
-        margin-bottom: clamp(1.875rem ,1.3189868204rem + 2.471169687vw ,3.75rem)
+        margin-bottom: clamp(1.875rem ,1.4301894563rem + 1.9769357496vw ,3.375rem)
+    }
+}
+@media (min-width:75em)and (max-width:98.37375em) {
+    .section__block {
+        max-width: clamp(54.0625rem ,-2.0902354404rem + 74.8703139205vw ,71.5625rem)
+    }
+    .section__block.section__block-about {
+        max-width: clamp(55.125rem ,4.9886290711rem + 66.8484945719vw ,70.75rem)
     }
 }
 @media (any-hover:hover) {
     .button:hover {
-        background-color: #fff;
+        background-color: var(--bg-third);
         color: var(--primary)
     }
     .button:hover i {
         background-color: var(--primary);
         color: #fff
+    }
+    .hero .button:hover,
+    .services .button:hover {
+        background-color: #fff
+    }
+    .top-section .button_white:hover {
+        background-color: #fff
+    }
+    .button_light:hover {
+        background-color: var(--bg-third)
     }
     .button_more:hover {
         background-color: var(--primary);
@@ -678,6 +692,9 @@ textarea.input {
     .button_more:hover:after,
     .button_more:hover:before {
         background: url(../img/icons/arrow_white.svg) no-repeat center/contain
+    }
+    .button_white-hover:hover {
+        background-color: #fff
     }
     .button.filter__more:hover i {
         color: #fff

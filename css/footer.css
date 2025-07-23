@@ -26,12 +26,7 @@
     gap: 1.25rem
 }
 .menu-footer__info {
-    flex: 0 0 21.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100%;
-    gap: 1.25rem
+    flex: 0 0 21.25rem
 }
 .menu-footer__address {
     font-size: 1rem;
@@ -120,7 +115,6 @@
     display: grid;
     justify-items: center;
     gap: 1.25rem;
-    text-align: center;
     line-height: 1.3;
     color: #7f7f7f
 }
@@ -135,11 +129,17 @@
     font-size: 1.125rem
 }
 @media (min-width:29.99875em) {
+    .menu-footer__info-top {
+        margin-bottom: 3.5625rem
+    }
     .menu-footer__title {
         margin-bottom: 1.25rem
     }
     .menu-footer_mobile {
         display: none
+    }
+    .bottom-footer__text {
+        text-align: center
     }
     .info-menu {
         border-top: 1px solid #2c2c2c;
@@ -169,7 +169,7 @@
         padding-bottom: 7.5rem
     }
 }
-@media (max-width:47.99875em) {
+@media (max-width:48.12375em) {
     .footer__info {
         padding-bottom: 2.5rem
     }
@@ -206,6 +206,9 @@
     .menu-footer__tel {
         margin-bottom: 1.25rem
     }
+    .menu-footer__info .menu-footer__info-bottom {
+        display: none
+    }
     .menu-footer__col {
         flex: 1 1 100%
     }
@@ -220,8 +223,7 @@
     }
     .bottom-footer__payments {
         margin-bottom: 1.875rem;
-        justify-content: flex-start;
-        gap: .625rem
+        justify-content: flex-start
     }
     .bottom-footer__text {
         font-size: .75rem;

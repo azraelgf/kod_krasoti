@@ -270,6 +270,9 @@
     .filter_popup .filter__item {
         gap: .75rem
     }
+    .filter__item {
+        padding-right: .625rem
+    }
     .add-product {
         max-width: 20rem;
         top: .625rem;

@@ -37,10 +37,13 @@
     display: flex;
     flex-direction: column;
     gap: .9375rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.25rem
+}
+.subcategory-service:not(:last-child) {
     border-bottom: 2px solid #000
 }
 .subcategory-service__title {
+    line-height: 1.2;
     font-size: 1.25rem
 }
 .subcategory-service__info {
@@ -57,7 +60,9 @@
     top: 0;
     z-index: 2;
     padding: .3125rem 0;
-    background-color: #fff
+    background-color: #fff;
+    box-shadow: 0 0 0 transparent;
+    border-bottom: none
 }
 .services-menu__title {
     width: 100%;
@@ -101,7 +106,7 @@
     pointer-events: auto
 }
 .services-menu__item {
-    padding: .625rem 0;
+    padding: .625rem 1.25rem;
     font-weight: 600;
     font-size: 1rem
 }
@@ -116,7 +121,7 @@
         grid-column: span 2
     }
 }
-@media (min-width:47.99875em) {
+@media (min-width:48.12375em) {
     .item-service__subcategories {
         grid-template-columns: repeat(2,1fr)
     }
@@ -126,7 +131,7 @@
         gap: 4.6875rem
     }
 }
-@media (max-width:47.99875em) {
+@media (max-width:48.12375em) {
     .services-items__wrapper {
         gap: 3.4375rem
     }
@@ -159,5 +164,13 @@
     }
     .subcategory-service {
         border-width: 1px
+    }
+}
+@media (any-hover:hover) {
+    .item-service__title:hover {
+        text-decoration: underline
+    }
+    .subcategory-service__title:hover {
+        text-decoration: underline
     }
 }

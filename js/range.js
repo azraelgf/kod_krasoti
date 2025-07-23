@@ -1603,7 +1603,7 @@
         const inputPopupTo = document.getElementById("popup-price-to");
         if (sliderPage && sliderPopup) {
             initialize(sliderPage, {
-                start: [ 20, 180 ],
+                start: [ 0, 5e3 ],
                 connect: true,
                 range: {
                     min: 0,

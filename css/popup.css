@@ -93,6 +93,7 @@
     width: 1.125rem;
     height: 1.125rem
 }
+
 @media (min-width:74.99875em) {
     .popup_filter .popup__content {
         max-width: 30vw

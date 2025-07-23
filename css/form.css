@@ -11,24 +11,25 @@
     margin-bottom: .625rem
 }
 @media (min-width:61.99875em) {
-    .form {
-        max-width: 51.25rem
-    }
     .form__row.form__row_radio {
         max-width: 31.25rem;
         justify-content: space-between
     }
 }
-@media (max-width:47.99875em) {
+@media (max-width:48.12375em) {
     .form .form__inner {
         gap: .9375rem
     }
     .form__label {
         font-size: .875rem
     }
+    .form__row_radio .form__label {
+        font-size: 1rem
+    }
 }
 @media (max-width:29.99875em) {
     .form__row.form__row_radio {
-        flex-direction: column
+        flex-direction: column;
+        margin-top: .9375rem
     }
 }
