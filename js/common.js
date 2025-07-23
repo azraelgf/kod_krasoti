@@ -248,7 +248,7 @@
         const header = document.querySelector("header.header");
         if (header) {
             const startPoint = parseInt(header.dataset.scroll) || 1;
-            let scrollDirection = 0;
+            let hasShown = false;
             window.addEventListener("scroll", (() => {
                 const event = new Event("windowScroll");
                 document.dispatchEvent(event);
@@ -257,9 +257,14 @@
                 const scrollTop = window.scrollY;
                 if (scrollTop >= startPoint) {
                     header.classList.add("_header-scroll");
-                    if (scrollTop > scrollDirection) header.classList.add("_header-show"); else if (scrollTop < scrollDirection) header.classList.remove("_header-show");
-                } else header.classList.remove("_header-scroll", "_header-show");
-                scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
+                    if (!hasShown) {
+                        header.classList.add("_header-show");
+                        hasShown = true;
+                    }
+                } else {
+                    header.classList.remove("_header-scroll", "_header-show");
+                    hasShown = false;
+                }
             }));
         }
     }
@@ -271,7 +276,6 @@
             }));
         }
     }), 0);
-    window["FLS"] = false;
     addLoadedClass();
     menuInit();
     spoilers();
