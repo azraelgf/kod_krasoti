@@ -234,3 +234,11 @@
         gap: 1.25rem
     }
 }
+@media (any-hover:hover) {
+    .menu-footer__link:hover {
+        text-decoration: underline
+    }
+    .info-menu__link:hover {
+        text-decoration: underline
+    }
+}

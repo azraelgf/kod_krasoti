@@ -1,54 +1,3 @@
-.marquee {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    gap: 60px
-}
-.marquee__items {
-    flex-shrink: 0;
-    display: flex;
-    gap: 60px;
-    counter-reset: item;
-    justify-content: space-around;
-    min-width: 100%;
-    -webkit-animation: scroll 200s linear infinite;
-    animation: scroll 200s linear infinite
-}
-.marquee__item {
-    text-transform: uppercase;
-    font-family: var(--second-font),sans-serif;
-    font-weight: 500;
-    font-size: 8rem;
-    color: #eee;
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0
-}
-@-webkit-keyframes scroll {
-    from {
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
-    }
-    to {
-        -webkit-transform: translateX(calc(-100% - 60px));
-        transform: translateX(calc(-100% - 60px))
-    }
-}
-@keyframes scroll {
-    from {
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
-    }
-    to {
-        -webkit-transform: translateX(calc(-100% - 60px));
-        transform: translateX(calc(-100% - 60px))
-    }
-}
 .hero {
     padding-top: 2.625rem
 }
@@ -113,46 +62,6 @@
     top: 50%;
     right: 0;
     translate: 0 -50%
-}
-.services__body {
-    position: relative
-}
-.item-services__img {
-    position: relative;
-    margin-bottom: 1.25rem;
-    min-height: 26.25rem;
-    display: flex;
-    justify-content: center
-}
-.item-services__img img {
-    border-radius: 1.125rem;
-    height: auto
-}
-.item-services__body {
-    padding: 0 .9375rem;
-    display: grid;
-    gap: 1.25rem
-}
-.item-services__title {
-    font-size: 1.375rem;
-    font-weight: 600;
-    line-height: 1.3
-}
-.item-services__text {
-    line-height: 1.3
-}
-.item-services__info {
-    display: flex;
-    align-items: center;
-    gap: .625rem
-}
-.item-services__btns {
-    position: absolute;
-    bottom: 1.375rem;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: all .3s ease-in-out
 }
 .blog {
     display: flex;
@@ -311,39 +220,9 @@
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp
 }
-@media (min-width:29.99875em) {
-    .item-services__img {
-        overflow: hidden
-    }
-}
 @media (min-width:48.12375em) {
     .hero_grey {
         padding-top: 0
-    }
-}
-@media (min-width:61.99875em) {
-    .services__body::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 100%;
-        background-color: #fff;
-        z-index: 2
-    }
-    .services__body::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 100%;
-        background-image: linear-gradient(260deg,rgba(255,255,255,0) 0,#fff 100%);
-        z-index: 2
-    }
-    .services__body.swiper {
-        overflow: visible
     }
 }
 @media (max-width:74.99875em) {
@@ -385,9 +264,6 @@
     .slide-hero__title small {
         font-size: 1.875rem
     }
-    .item-services__title {
-        font-size: 1.25rem
-    }
     .blog {
         flex-wrap: wrap
     }
@@ -399,15 +275,6 @@
     }
 }
 @media (max-width:29.99875em) {
-    .marquee {
-        gap: 1.875rem
-    }
-    .marquee__items {
-        gap: 1.875rem
-    }
-    .marquee__item {
-        font-size: 3rem
-    }
     .hero {
         padding-top: 4.0625rem
     }
@@ -429,17 +296,6 @@
     .slide-hero__title small {
         font-size: 1.5rem
     }
-    .item-services__img {
-        min-height: 18.4375rem
-    }
-    .item-services__body {
-        padding: 3.75rem 0 0
-    }
-    .item-services__btns {
-        top: 100%;
-        bottom: auto;
-        translate: 0 .625rem
-    }
     .blog__main {
         padding: 1.25rem .9375rem
     }
@@ -458,23 +314,8 @@
     }
 }
 @media (any-hover:hover) {
-    .item-services__img:hover .item-services__btns {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto
-    }
-    .item-services__title:hover {
-        text-decoration: underline
-    }
     .blog-item:hover .blog-item__title {
         text-decoration: underline
-    }
-}
-@media (any-hover:none) {
-    .item-services__btns {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto
     }
 }
 @media print,

@@ -1,3 +1,18 @@
+.more-posts__content {
+    margin-top: 2.5rem
+}
+.more-posts__content,
+.more-posts__visible {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 1.25rem
+}
+.more-posts__item {
+    flex: 1 1 30%
+}
+._showmore-active .more-posts__btn {
+    margin-top: 1.875rem
+}
 .item-post__img {
     border-radius: 1.125rem;
     overflow: hidden;
@@ -21,7 +36,22 @@
         flex-wrap: wrap
     }
 }
+@media (max-width:61.99875em) {
+    .more-posts__item {
+        flex: 1 1 46%
+    }
+}
 @media (max-width:29.99875em) {
+    .more-posts__content {
+        margin-top: 1.5625rem
+    }
+    .more-posts__content,
+    .more-posts__visible {
+        row-gap: 1.5625rem
+    }
+    .more-posts__item {
+        flex: 1 1 100%
+    }
     .item-post {
         overflow-x: auto
     }
