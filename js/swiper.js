@@ -4009,6 +4009,49 @@
                     }
                 }
             }
+        }, {
+            selector: ".certificates__body",
+            modules: [ Pagination, Navigation ],
+            options: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                navigation: {
+                    prevEl: ".sert-btn-prev",
+                    nextEl: ".sert-btn-next"
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 20,
+                        autoHeight: true
+                    },
+                    480: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 20
+                    }
+                }
+            }
         } ];
         const servicesSliderEl = document.querySelector(".services__body");
         if (servicesSliderEl) {

@@ -1,0 +1,114 @@
+.certificates__item img {
+    border-radius: .9375rem
+}
+.team-detail {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start
+}
+.team-detail__images {
+    flex: 0 0 39%;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(2,1fr)
+}
+.team-detail__images img {
+    border-radius: .9375rem
+}
+.team-detail__images img:first-child {
+    grid-column: span 2
+}
+.content-detail-team__title {
+    margin-bottom: 1.875rem
+}
+.content-detail-team__beige {
+    margin-bottom: 1.875rem
+}
+.content-detail-team__text {
+    line-height: 1.3;
+    margin-bottom: 2.5rem
+}
+.content-detail-team__text ul li+li {
+    margin-top: .1875rem
+}
+.content-detail-team__actions {
+    margin-bottom: 2.8125rem
+}
+.content-detail-team__info {
+    font-size: 1rem;
+    line-height: 1.3
+}
+.content-detail-team__info strong {
+    font-weight: 600;
+    display: block;
+    margin: 1.25rem 0
+}
+.content-detail-team__info h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem
+}
+.content-detail-team__info p+p {
+    margin-top: 1.25rem
+}
+.content-detail-team__info ul {
+    padding-left: 1.25rem
+}
+.content-detail-team__info ul li {
+    list-style: disc
+}
+.content-detail-team__info ul li+li {
+    margin-top: .3125rem
+}
+.content-detail-team__btn {
+    min-width: 19.25rem
+}
+@media (max-width:61.99875em) {
+    .team-detail__images {
+        gap: .75rem
+    }
+}
+@media (max-width:51.24875em) {
+    .team-detail {
+        flex-wrap: wrap
+    }
+    .team-detail__images {
+        flex: 1 1 100%;
+        order: -1
+    }
+    .team-detail__images img {
+        max-height: 32.5rem;
+        -o-object-position: top;
+        object-position: top
+    }
+    .team-detail__images img:last-child,
+    .team-detail__images img:nth-child(2) {
+        display: none
+    }
+}
+@media (max-width:48.12375em) {
+    .content-detail-team__title {
+        margin-bottom: 1.25rem
+    }
+    .content-detail-team__beige {
+        margin-bottom: 1.25rem
+    }
+    .content-detail-team__text {
+        margin-bottom: 1.875rem
+    }
+    .content-detail-team__actions {
+        margin-bottom: 1.875rem
+    }
+    .content-detail-team__info h3 {
+        font-size: 1.125rem
+    }
+}
+@media (max-width:29.99875em) {
+    .content-detail-team__info {
+        font-size: .875rem
+    }
+    .content-detail-team__info p+p {
+        margin-top: .75rem
+    }
+}
