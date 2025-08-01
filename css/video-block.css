@@ -27,6 +27,7 @@
     max-height: 39.6875rem
 }
 .video-block__img {
+    width: 100%;
     border-radius: 1.125rem;
     position: relative;
     overflow: hidden

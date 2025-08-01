@@ -16,7 +16,7 @@
 }
 .accent-block__beiges {
     display: flex;
-    gap: .3125rem .625rem;
+    gap: .625rem;
     align-items: center
 }
 @media (min-width:29.99875em) {

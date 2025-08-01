@@ -4052,73 +4052,141 @@
                     }
                 }
             }
+        }, {
+            selector: ".steps-service__body",
+            modules: [ Pagination, Navigation ],
+            options: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                navigation: {
+                    prevEl: ".steps-btn-prev",
+                    nextEl: ".steps-btn-next"
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                        autoHeight: true
+                    },
+                    480: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20
+                    },
+                    640: {
+                        slidesPerView: 1.4,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 20
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                }
+            }
+        }, {
+            selector: ".benefits__body",
+            modules: [ Pagination ],
+            options: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                        autoHeight: true
+                    },
+                    480: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20
+                    },
+                    640: {
+                        slidesPerView: 1.4,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 20
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                }
+            }
         } ];
         const servicesSliderEl = document.querySelector(".services__body");
         if (servicesSliderEl) {
             const prevBtn = document.querySelector(".services-btn-prev");
             const nextBtn = document.querySelector(".services-btn-next");
-            if (prevBtn && nextBtn) {
-                let touched = false;
-                prevBtn.style.opacity = "0";
-                nextBtn.style.opacity = "0";
-                prevBtn.style.transition = nextBtn.style.transition = "opacity 0.3s ease";
-                new Swiper(servicesSliderEl, {
-                    modules: [ Pagination, Navigation ],
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    speed: 800,
-                    observer: true,
-                    observeParents: true,
-                    navigation: {
-                        prevEl: prevBtn,
-                        nextEl: nextBtn
+            new Swiper(servicesSliderEl, {
+                modules: [ Pagination, Navigation ],
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                observer: true,
+                observeParents: true,
+                navigation: {
+                    prevEl: prevBtn,
+                    nextEl: nextBtn
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                        autoHeight: true
                     },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true
+                    480: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20
                     },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                            autoHeight: true
-                        },
-                        480: {
-                            slidesPerView: 1.2,
-                            spaceBetween: 20
-                        },
-                        640: {
-                            slidesPerView: 1.4,
-                            spaceBetween: 20
-                        },
-                        768: {
-                            slidesPerView: 1.7,
-                            spaceBetween: 20
-                        },
-                        992: {
-                            slidesPerView: 2.3,
-                            spaceBetween: 20
-                        },
-                        1268: {
-                            slidesPerView: 2.6,
-                            spaceBetween: 20
-                        },
-                        1430: {
-                            slidesPerView: 3,
-                            spaceBetween: 20
-                        }
+                    640: {
+                        slidesPerView: 1.4,
+                        spaceBetween: 20
                     },
-                    on: {
-                        touchStart: () => {
-                            if (!touched) {
-                                touched = true;
-                                prevBtn.style.opacity = "1";
-                                nextBtn.style.opacity = "1";
-                            }
-                        }
+                    768: {
+                        slidesPerView: 1.7,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 20
+                    },
+                    1268: {
+                        slidesPerView: 2.6,
+                        spaceBetween: 20
+                    },
+                    1430: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
                     }
-                });
-            }
+                },
+                on: {}
+            });
         }
         sliders.forEach((({selector, modules, options}) => {
             const elements = document.querySelectorAll(selector);

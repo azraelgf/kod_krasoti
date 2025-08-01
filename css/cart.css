@@ -36,14 +36,21 @@
 }
 .cart-item__top {
     display: flex;
+    gap: .625rem;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: .875rem
 }
 .cart-item__top-left {
     display: flex;
     align-items: center;
-    gap: 1rem
+    gap: .3125rem 1rem;
+    flex-wrap: wrap
+}
+.cart-item__beiges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3125rem
 }
 .cart-item__del {
     display: flex;

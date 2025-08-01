@@ -47,14 +47,11 @@
     visibility: hidden;
     pointer-events: none;
     transition: all .3s ease-in-out;
-    min-width: 86%
+    min-width: calc(100% - 2.5rem)
 }
 @media (max-width:29.99875em) {
     .cosmetologist-item__img {
         min-height: 25rem
-    }
-    .team-items .cosmetologist-item__body {
-        padding: 1.25rem 0
     }
     .cosmetologist-item__btn {
         min-width: 88%

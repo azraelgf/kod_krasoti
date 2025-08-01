@@ -53,7 +53,7 @@
     margin-top: 1.25rem
 }
 .content-detail-team__info ul {
-    padding-left: 1.25rem
+    padding-left: 1.875rem
 }
 .content-detail-team__info ul li {
     list-style: disc
@@ -64,9 +64,23 @@
 .content-detail-team__btn {
     min-width: 19.25rem
 }
+@media (min-width:51.24875em) {
+    .team-detail__images {
+        top: 5.9375rem;
+        position: sticky
+    }
+}
+@media (min-width:61.99875em) {
+    .team-detail__images {
+        top: 8.125rem
+    }
+}
 @media (max-width:61.99875em) {
     .team-detail__images {
         gap: .75rem
+    }
+    .content-detail-team__info ul {
+        padding-left: 1.25rem
     }
 }
 @media (max-width:51.24875em) {

@@ -1,3 +1,39 @@
+[data-showmore-button] {
+    margin-top: 1.25rem;
+    font-weight: 500;
+    position: relative;
+    padding: .625rem;
+    border-radius: .625rem;
+    border: 2px solid var(--border);
+    min-height: 3.1875rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 13.75rem;
+    transition: background-color .3s ease-in-out,color .3s ease-in-out
+}
+[data-showmore-button]::before {
+    rotate: 90deg;
+    content: "";
+    width: 1.25rem;
+    height: .625rem;
+    background: url(../img/icons/arrow.svg) no-repeat center/contain;
+    transition: rotate .3s ease-in-out
+}
+._showmore-active [data-showmore-button]::before {
+    rotate: -90deg
+}
+[data-showmore-button]::after {
+    rotate: 90deg;
+    content: "";
+    width: 1.25rem;
+    height: .625rem;
+    background: url(../img/icons/arrow.svg) no-repeat center/contain;
+    transition: rotate .3s ease-in-out
+}
+._showmore-active [data-showmore-button]::after {
+    rotate: -90deg
+}
 [data-showmore-button] span:last-child {
     display: none
 }
@@ -6,4 +42,24 @@
 }
 ._showmore-active [data-showmore-button] span:last-child {
     display: block
+}
+@media (max-width:48.12375em) {
+    [data-showmore-button] {
+        margin-top: 1rem
+    }
+}
+@media (max-width:29.99875em) {
+    [data-showmore-button] {
+        min-width: 100%
+    }
+}
+@media (any-hover:hover) {
+    [data-showmore-button]:hover {
+        background-color: var(--primary);
+        color: #fff
+    }
+    [data-showmore-button]:hover:after,
+    [data-showmore-button]:hover:before {
+        background: url(../img/icons/arrow_white.svg) no-repeat center/contain
+    }
 }

@@ -447,7 +447,7 @@ textarea.input {
 .top-section {
     display: flex;
     justify-content: space-between;
-    gap: .625rem;
+    gap: 1.25rem;
     align-items: center;
     flex-wrap: wrap
 }
@@ -602,7 +602,7 @@ textarea.input {
         font-size: 1rem
     }
     .section_inner .section__title {
-        margin-bottom: .9375rem
+        margin-bottom: 1.25rem
     }
     .section__text:not(:last-child) {
         margin-bottom: 1.25rem
@@ -690,12 +690,12 @@ textarea.input {
 }
 @media (max-width:22.5em) {
     .section__title {
-        margin-bottom: 1.625rem
+        margin-bottom: 1.875rem
     }
 }
 @media (min-width:22.5em)and (max-width:98.375em) {
     .section__title {
-        margin-bottom: clamp(1.625rem ,1.3655271829rem + 1.1532125206vw ,2.5rem)
+        margin-bottom: clamp(1.875rem ,1.6896622735rem + .823723229vw ,2.5rem)
     }
 }
 @media (min-width:75em)and (max-width:98.37375em) {

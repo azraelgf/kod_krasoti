@@ -1,8 +1,7 @@
-.benefits {
-    display: flex;
-    gap: 1.25rem
-}
 .benefits__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     padding: 1.875rem;
     flex: 1 1 auto;
     border-radius: .9375rem;
@@ -26,22 +25,22 @@
         flex-wrap: wrap;
         gap: 1rem
     }
+    .benefits__top strong {
+        flex: 1 1 100%
+    }
 }
 @media (max-width:61.99875em) {
-    .benefits {
-        flex-wrap: wrap
+    .benefits__top strong {
+        flex: 1 1 100%
     }
 }
 @media (max-width:29.99875em) {
     .benefits__item {
-        padding: .625rem 1rem
+        padding: 1.25rem 1rem
     }
     .benefits__top {
         gap: .625rem;
         margin-bottom: .625rem
-    }
-    .benefits__top strong {
-        flex: 1 1 100%
     }
     .benefits__top-icon {
         flex: 0 0 2rem
