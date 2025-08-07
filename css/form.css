@@ -2,11 +2,23 @@
     display: grid;
     gap: 1.875rem
 }
+.form__inner+.form__inner {
+    margin-top: 1.875rem
+}
+.form__title {
+    font-size: 1.5rem;
+    font-weight: 500
+}
 .form__row.form__row_radio {
     display: flex;
     gap: 1.25rem
 }
 .form__row.form__row_horizontal {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap
+}
+.form__row.form__row_btns {
     display: flex;
     gap: 1.25rem;
     flex-wrap: wrap
@@ -20,6 +32,9 @@
 .form__row_horizontal .form__button {
     min-width: 13.625rem
 }
+.personal-cabinet .form__button {
+    min-width: 16.875rem
+}
 .form__label {
     font-size: 1rem;
     margin-bottom: .625rem
@@ -30,15 +45,31 @@
 .form__text a {
     text-decoration: underline
 }
+.form_profile .form__text {
+    margin-top: .625rem
+}
+@media (min-width:29.99875em) {
+    .form__row.form__row_btns {
+        margin-top: .5rem
+    }
+}
 @media (min-width:61.99875em) {
     .form__row.form__row_radio {
         max-width: 31.25rem;
         justify-content: space-between
     }
 }
+@media (min-width:74.99875em) {
+    .form.form_profile {
+        max-width: 58.5rem
+    }
+}
 @media (max-width:48.12375em) {
     .form__inner {
         gap: .9375rem
+    }
+    .form__inner+.form__inner {
+        margin-top: .9375rem
     }
     .form__row_horizontal .form__column {
         flex: 1 1 100%
@@ -54,11 +85,17 @@
     }
 }
 @media (max-width:29.99875em) {
+    .form__title {
+        font-size: 1.125rem
+    }
     .form__row.form__row_radio {
         flex-direction: column;
         margin-top: .9375rem
     }
     .form__row.form__row_horizontal {
         gap: .9375rem
+    }
+    .personal-cabinet .form__button {
+        min-width: 100%
     }
 }

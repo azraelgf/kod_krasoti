@@ -16,6 +16,7 @@
     --accent: #BF9D6E;
     --green: #41AD49;
     --red: #d30707;
+    --error: #EB4335;
     --grey: #6C6C6C;
     --border: #F1EFF2;
     --bg-primary: #F8F8F8;
@@ -100,6 +101,32 @@ h5,
 h6 {
     font-weight: inherit;
     font-size: inherit
+}
+.ibg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+.ibg--top {
+    -o-object-position: top;
+    object-position: top
+}
+.ibg--bottom {
+    -o-object-position: bottom;
+    object-position: bottom
+}
+.ibg--left {
+    -o-object-position: left;
+    object-position: left
+}
+.ibg--right {
+    -o-object-position: right;
+    object-position: right
+}
+.ibg--contain {
+    -o-object-fit: contain;
+    object-fit: contain
 }
 .lock body {
     overflow: hidden;
@@ -248,6 +275,17 @@ h6 {
 .button_brown {
     background-color: var(--accent)
 }
+.button_black {
+    background-color: var(--primary);
+    padding: .5rem 1.25rem;
+    min-width: 12.375rem
+}
+.form__row .button_black {
+    margin-top: .625rem
+}
+.button_off {
+    display: none
+}
 .button.filter__more {
     min-height: 2.8125rem
 }
@@ -288,6 +326,12 @@ textarea {
 }
 .search-box .input {
     border: 0
+}
+.form_bg-input .input {
+    background-color: var(--bg-third)
+}
+.form_bg-input .input:focus {
+    outline-color: var(--bg-third)
 }
 .feedback .input {
     font-size: 1rem;
@@ -344,32 +388,6 @@ textarea.input {
 .search-box__btn svg {
     width: 1.5rem;
     height: 1.5rem
-}
-.ibg {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover
-}
-.ibg--top {
-    -o-object-position: top;
-    object-position: top
-}
-.ibg--bottom {
-    -o-object-position: bottom;
-    object-position: bottom
-}
-.ibg--left {
-    -o-object-position: left;
-    object-position: left
-}
-.ibg--right {
-    -o-object-position: right;
-    object-position: right
-}
-.ibg--contain {
-    -o-object-fit: contain;
-    object-fit: contain
 }
 .page {
     padding-top: 7.1875rem
@@ -440,6 +458,10 @@ textarea.input {
 .section.section_bottom {
     padding-top: 0;
     padding-bottom: 4.375rem
+}
+.section.personal-cabinet {
+    padding-top: 0;
+    padding-bottom: 7.8125rem
 }
 .bg-primary {
     background-color: var(--bg-primary)
@@ -583,6 +605,9 @@ textarea.input {
     .title {
         font-size: 2.25rem
     }
+    .section.personal-cabinet {
+        padding-bottom: 5rem
+    }
 }
 @media (max-width:48.12375em) {
     .feedback .input {
@@ -606,6 +631,9 @@ textarea.input {
     }
     .section__text:not(:last-child) {
         margin-bottom: 1.25rem
+    }
+    .section.personal-cabinet {
+        padding-bottom: 3.4375rem
     }
     .btns-group {
         row-gap: 1rem
@@ -634,6 +662,9 @@ textarea.input {
     .button_more {
         min-height: 3.0625rem
     }
+    .button_black {
+        min-width: 100%
+    }
     .item-services__btns .button.button_grey {
         padding-right: .625rem
     }
@@ -647,6 +678,12 @@ textarea.input {
     .input {
         height: 2.8125rem;
         font-size: .75rem
+    }
+    .personal-cabinet .input {
+        height: 3.0625rem
+    }
+    .form_bg-input .input {
+        background-color: rgba(0,0,0,0)
     }
     .page {
         padding-top: 2.8125rem

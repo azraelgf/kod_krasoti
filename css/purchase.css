@@ -1,0 +1,201 @@
+.purchase {
+    display: grid;
+    gap: 2.5rem
+}
+.purchase__title {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    border-radius: .9375rem;
+    background-color: var(--bg-primary);
+    position: relative
+}
+.purchase_cons .purchase__title {
+    grid-template-columns: repeat(4,1fr) 16.875rem
+}
+.purchase_courses .purchase__title {
+    grid-template-columns: repeat(4,1fr) 16.875rem
+}
+._spoiler-init .purchase__title {
+    cursor: pointer
+}
+.purchase__title-item {
+    color: var(--black);
+    display: flex;
+    gap: .625rem;
+    line-height: 130%
+}
+.purchase__title-item a {
+    text-decoration: underline
+}
+.purchase__title-item_price {
+    white-space: nowrap
+}
+.purchase__label {
+    font-weight: 600
+}
+.purchase__value strong {
+    font-size: 1rem;
+    font-weight: 800
+}
+.purchase__status {
+    display: flex;
+    align-items: center;
+    gap: .3125rem
+}
+.purchase__status svg {
+    width: .875rem;
+    height: .875rem
+}
+.purchase__status.purchase__status_done {
+    color: var(--green)
+}
+.purchase__status.purchase__status_close {
+    color: var(--error)
+}
+.purchase__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5625rem;
+    height: 2.5625rem;
+    border-radius: .625rem;
+    background-color: var(--primary);
+    color: #fff
+}
+.purchase__arrow svg {
+    width: .875rem;
+    height: .5rem;
+    transition: rotate .3s ease-in-out
+}
+._spoiler-active .purchase__arrow svg {
+    rotate: 180deg
+}
+.purchase__body {
+    padding-top: 1.625rem
+}
+.purchase__product+.purchase__product {
+    margin-top: 1.25rem
+}
+.purchase__btn {
+    min-width: -webkit-max-content;
+    min-width: max-content
+}
+.product-purchase {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center
+}
+.product-purchase__img {
+    flex: 0 0 6.25rem;
+    border-radius: 1.125rem;
+    background-color: var(--bg-primary)
+}
+.product-purchase__body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .625rem
+}
+.product-purchase__title {
+    font-size: 1.125rem;
+    line-height: 130%
+}
+.product-purchase__title small {
+    color: var(--grey);
+    font-size: .9375rem
+}
+.product-purchase__brand {
+    color: var(--grey)
+}
+.product-purchase__price {
+    font-weight: 600;
+    font-size: 1.125rem
+}
+@media (min-width:61.99875em) {
+    .purchase_history .purchase__title {
+        grid-template-columns: repeat(7,1fr) 2.5625rem
+    }
+    .purchase__title-item {
+        flex-direction: column
+    }
+}
+@media (min-width:120em) {
+    .purchase__title {
+        padding: 1.875rem
+    }
+}
+@media (max-width:75em) {
+    .purchase__title {
+        padding: 1.25rem
+    }
+}
+@media (max-width:74.99875em) {
+    .purchase_cons .purchase__title {
+        grid-template-columns: repeat(5,1fr)
+    }
+    .purchase_courses .purchase__title {
+        grid-template-columns: repeat(5,1fr)
+    }
+    .purchase__title-item {
+        font-size: .8125rem
+    }
+}
+@media (max-width:61.99875em) {
+    .purchase__title {
+        flex-direction: column;
+        align-items: flex-start
+    }
+    .purchase_cons .purchase__title {
+        grid-template-columns: 1fr
+    }
+    .purchase_courses .purchase__title {
+        grid-template-columns: 1fr
+    }
+    .purchase__title-item {
+        font-size: .875rem
+    }
+    .purchase_history .purchase__title-item:last-child {
+        position: absolute;
+        right: 1.25rem;
+        bottom: 1.25rem
+    }
+}
+@media (max-width:48.12375em) {
+    .product-purchase {
+        gap: .625rem
+    }
+    .product-purchase__img {
+        flex: 0 0 4.375rem
+    }
+    .product-purchase__title {
+        font-size: .9375rem
+    }
+    .product-purchase__title small {
+        font-size: .875rem
+    }
+    .product-purchase__brand {
+        font-size: .75rem
+    }
+    .product-purchase__price {
+        font-size: .9375rem
+    }
+}
+@media (max-width:29.99875em) {
+    .purchase__body {
+        padding-top: 1.25rem
+    }
+    .purchase__btn {
+        min-width: 100%
+    }
+    .product-purchase__img {
+        border-radius: .9375rem
+    }
+}
+@media (min-width:75em)and (max-width:120em) {
+    .purchase__title {
+        padding: clamp(1.25rem ,.2083333333rem + 1.3888888889vw ,1.875rem)
+    }
+}
