@@ -8,11 +8,6 @@
     display: grid;
     gap: 2.5rem
 }
-@media (min-width:29.99875em) {
-    .categories-nav__mob {
-        display: none
-    }
-}
 @media (max-width:48.12375em) {
     .posts__items {
         grid-template-columns: repeat(2,1fr);
@@ -26,8 +21,5 @@
     .posts__more {
         margin-top: 3.125rem;
         gap: .625rem
-    }
-    .categories-nav__list {
-        display: none
     }
 }

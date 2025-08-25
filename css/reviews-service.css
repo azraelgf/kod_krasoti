@@ -1,9 +1,11 @@
 .reviews-service__items {
-    display: flex;
+    display: grid;
     gap: 1.25rem
 }
-.reviews-service__item {
-    flex: 1 1 48%
+.reviews-service__more {
+    margin-top: 4.375rem;
+    display: grid;
+    gap: 2.5rem
 }
 .item-review-service {
     border: 2px solid var(--border);
@@ -34,12 +36,9 @@
 .item-review-service__btn {
     min-width: 12rem
 }
-@media (max-width:61.99875em) {
+@media (min-width:48.12375em) {
     .reviews-service__items {
-        flex-wrap: wrap
-    }
-    .reviews-service__item {
-        flex: 1 1 100%
+        grid-template-columns: repeat(2,1fr)
     }
 }
 @media (max-width:48.12375em) {
@@ -57,6 +56,10 @@
     }
 }
 @media (max-width:29.99875em) {
+    .reviews-service__more {
+        margin-top: 3.125rem;
+        gap: .625rem
+    }
     .item-review-service {
         padding: 1.25rem
     }

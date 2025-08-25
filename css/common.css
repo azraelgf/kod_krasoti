@@ -212,7 +212,7 @@ h6 {
     justify-content: center;
     color: var(--primary);
     background-color: var(--secondary);
-    padding: 1.0625rem 1.25rem;
+    padding: .875rem 1.25rem;
     border: 1px solid transparent
 }
 .button.button_grey-icon {
@@ -491,6 +491,9 @@ textarea.input {
 .item-services__img .btns-group__btn {
     flex: 1 1 50%
 }
+.study-item .btns-group__btn {
+    flex: 1 1 46%
+}
 .item-services__img .btns-group {
     width: 90%;
     flex-wrap: nowrap
@@ -508,6 +511,9 @@ textarea.input {
     font-size: 1.125rem;
     padding: .5625rem 1rem;
     line-height: 1.0555555556
+}
+.beige-light.study-item__beige {
+    font-family: var(--primary-font),sans-serif
 }
 .scrollable {
     scrollbar-width: thin;
