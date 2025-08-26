@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html class="lock" lang="ru">
+
+<head>
+	<title>Отзывы</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/common.css?_v=1.4">
+	<link rel="stylesheet" href="css/about-block.css?_v=1.4">
+	<link rel="stylesheet" href="css/breadcrumbs.css?_v=1.2">
+	<link rel="stylesheet" href="css/header.css?_v=1.2">
+	<link rel="stylesheet" href="css/footer.css?_v=1.2">
+	<link rel="stylesheet" href="css/form.css?_v=1.2">
+	<link rel="stylesheet" href="css/reviews-service.css?_v=1.3">
+	<link rel="stylesheet" href="css/posts.css?_v=1.3">
+	<link rel="stylesheet" href="css/categories-nav.css?_v=1.3">
+	<link rel="stylesheet" href="css/pagging.css?_v=1.3">
+	<link rel="stylesheet" href="css/select.css?_v=1.3">
+	<link rel="stylesheet" href="css/modal.css?_v=1.3">
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--	 <style>body{opacity: 0;}</style>-->
+	<style>
+		/* Начальное состояние */
+		body {
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		/* Класс, добавляемый после загрузки */
+		html.loaded body {
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-scroll="200" data-scroll-show="400  ">
+			<div class="header__top top-header">
+				<div class="top-header__container">
+					<div class="top-header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Сертификаты</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Доставка и&nbsp;оплата</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="top-header__time time-header-top">
+						<div class="time-header-top__item">
+							Ежедневно: с 9.00 до 20.00
+						</div>
+						<div class="time-header-top__item">
+							<a href="tel:+74994600013">+7 499 460 00 13</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__sticky">
+				<div class="header__middle middle-header">
+					<div class="middle-header__container">
+						<a href="/" class="middle-header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+						<div class="middle-header__menu middle-menu">
+							<ul class="middle-menu__list">
+								<li class="middle-menu__item"><a href="#" class="middle-menu__link">Наши услуги</a></li>
+								<li class="middle-menu__item"><a href="#" class="middle-menu__link">Косметологи</a></li>
+								<li class="middle-menu__item"><a href="#" class="middle-menu__link">Обучение</a></li>
+							</ul>
+						</div>
+						<div class="middle-header__search">
+							<form action="#">
+								<div class="search-box">
+									<input class="search-box__input input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите запрос">
+									<button class="search-box__btn" type="submit">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#search"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="middle-header__links links-middle">
+							<a href="" class="links-middle__link _link-heart">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#heart"></use>
+								</svg>
+							</a>
+							<a href="" class="links-middle__link">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#user"></use>
+								</svg>
+							</a>
+							<div class="links-middle__link links-middle__link_cart">
+								<a href="" class="cart-header">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#cart"></use>
+									</svg>
+									<span class="cart-header__info">
+										<strong>0 byn</strong>
+										<small>Корзина пуста</small>
+									</span>
+								</a>
+								<div class="cart-header__content content-cart">
+									<div class="content-cart__top">
+										<div class="content-cart__title">В корзине 3 товара</div>
+										<a href="" class="content-cart__btn">
+											<span>Перейти к оформлению</span>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+										</a>
+									</div>
+									<ul class="content-cart__items">
+										<li class="content-cart-item">
+											<div class="content-cart-item__img">
+												<img src="img/products/01/01.webp" alt="Image" class="ibg">
+											</div>
+											<div class="content-cart-item__body">
+												<div class="content-cart-item__title">
+													Hadat — HYDRO INTENSIVE REPAIR SHAMPOO — ВОССТАНАВЛИВАЮЩИЙ ШАМПУНЬ <small>250
+														мл.</small>
+												</div>
+												<div class="content-cart-item__price">
+													35.50 byn
+												</div>
+											</div>
+											<button class="content-cart-item__del" type="button">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#del"></use>
+												</svg>
+											</button>
+										</li>
+										<li class="content-cart-item">
+											<div class="content-cart-item__img">
+												<img src="img/products/01/01.webp" alt="Image" class="ibg">
+											</div>
+											<div class="content-cart-item__body">
+												<div class="content-cart-item__title">
+													Hadat — HYDRO INTENSIVE REPAIR SHAMPOO — ВОССТАНАВЛИВАЮЩИЙ ШАМПУНЬ <small>250
+														мл.</small>
+												</div>
+												<div class="content-cart-item__price">
+													35.50 byn
+												</div>
+											</div>
+											<button class="content-cart-item__del" type="button">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#del"></use>
+												</svg>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+						</div>
+					</div>
+
+				</div>
+				<div class="header__bottom catalog-header">
+					<div class="catalog-header__container">
+						<ul class="catalog-header__menu">
+							<li class="catalog-header__item">
+								<a href="" class="catalog-header__link catalog-btn">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#burger"></use>
+									</svg>
+									<span>Каталог товаров</span>
+								</a>
+							</li>
+							<li class="catalog-header__item">
+								<a href="" class="catalog-header__link">
+									Для лица
+								</a>
+							</li>
+							<li class="catalog-header__item">
+								<a href="" class="catalog-header__link">
+									Для волос
+								</a>
+							</li>
+							<li class="catalog-header__item">
+								<a href="" class="catalog-header__link">
+									Для тела
+								</a>
+							</li>
+							<li class="catalog-header__item">
+								<a href="" class="catalog-header__link">
+									Уход за губами
+								</a>
+							</li>
+							<li class="catalog-header__item">
+								<a href="" class="catalog-header__link">
+									Декоративная косметика
+								</a>
+							</li>
+							<li class="catalog-header__item">
+								<a href="" class="catalog-header__link">
+									Уход за полостью рта
+								</a>
+							</li>
+							<li class="catalog-header__item">
+								<a href="" class="catalog-header__link">
+									Наборы
+								</a>
+							</li>
+							<li class="catalog-header__item catalog-header-more">
+								<a href="#" class="catalog-header__link">
+									Еще ...
+								</a>
+								<ul class="catalog-header-more__list">
+									<li class="catalog-header-more__item">
+										<a href="">Для тела</a>
+									</li>
+									<li class="catalog-header-more__item">
+										<a href="">Для ногтей</a>
+									</li>
+									<li class="catalog-header-more__item">
+										<a href="">Уход за кожей головы</a>
+									</li>
+									<li class="catalog-header-more__item">
+										<a href="">Профессиональная косметика</a>
+									</li>
+									<li class="catalog-header-more__item">
+										<a href="">Натуральная косметика</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--before 992 - hidden -->
+			<div class="header__mobile mobile-header">
+				<div class="mobile-header__inner" data-spoilers="991.98">
+					<div class="mobile-header__item">
+						<button class="mobile-header__title" data-spoiler type="button">Каталог товаров</button>
+						<div class="mobile-header__body">
+							<ul class="mobile-menu">
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Для лица</a></li>
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Для волос</a></li>
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Для тела</a></li>
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Уход за губами</a></li>
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Декоративная косметика</a>
+								</li>
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Уход за полостью рта</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="mobile-header__item">
+						<button class="mobile-header__title" data-spoiler type="button">Наши услуги</button>
+						<div class="mobile-header__body">
+							<ul class="mobile-menu">
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Косметология</a></li>
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">SPA-релакс</a></li>
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Эстетический уход</a></li>
+								<li class="mobile-menu__item"><a href="" class="mobile-menu__link">Нутрициология</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="mobile-header__item">
+						<a href="" class="mobile-header__title">Косметологи</a>
+					</div>
+					<div class="mobile-header__item">
+						<a href="" class="mobile-header__title">Обучение</a>
+					</div>
+					<div class="mobile-header__item">
+						<a href="" class="mobile-header__title">О нас</a>
+					</div>
+					<div class="mobile-header__item">
+						<a href="" class="mobile-header__title">Сертификаты</a>
+					</div>
+					<div class="mobile-header__item">
+						<a href="" class="mobile-header__title">Доставка и оплата</a>
+					</div>
+					<div class="mobile-header__item">
+						<a href="" class="mobile-header__title">Блог</a>
+					</div>
+					<div class="mobile-header__item">
+						<a href="" class="mobile-header__title">Контакты</a>
+					</div>
+				</div>
+				<div class="mobile-header__info">
+					<div class="mobile-header__time">Ежедневно: с 9.00 до 20.00</div>
+					<a href="tel:+74994600013" class="mobile-header__tel">+7 499 460 00 13</a>
+				</div>
+			</div>
+			<!--end  -->
+		</header>
+
+		<main class="page">
+			<nav class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><span class="breadcrumbs__current">Отзывы</span></li>
+					</ul>
+				</div>
+			</nav>
+			<section class="section section_inner section_bottom posts">
+				<div class="container">
+					<h2 class="section__title title">Отзывы</h2>
+					<div class="posts__categories-nav categories-nav">
+						<ul class="categories-nav__list">
+							<li class="categories-nav__item">
+								<a href="" class="categories-nav__link categories-nav__link_active">Все</a>
+							</li>
+							<li class="categories-nav__item">
+								<a href="" class="categories-nav__link">2025</a>
+							</li>
+							<li class="categories-nav__item">
+								<a href="" class="categories-nav__link">2024</a>
+							</li>
+							<li class="categories-nav__item">
+								<a href="" class="categories-nav__link">2023</a>
+							</li>
+						</ul>
+						<div class="categories-nav__mob">
+							<select name="categories-nav" data-class-modif="categories-nav">
+								<option value="" selected>Все</option>
+								<option value="1" selected>Все</option>
+								<option value="2">2025</option>
+								<option value="3">2024</option>
+								<option value="4">2023</option>
+							</select>
+						</div>
+					</div>
+					<div class="reviews-service">
+						<div class="reviews-service__items">
+							<div class="reviews-service__item item-review-service">
+								<div class="item-review-service__top">
+									<div class="item-review-service__icon"></div>
+									<div class="item-review-service__title text">Анна, 35 лет</div>
+								</div>
+								<div class="item-review-service__text">
+									Танечка прекрасный специалист! Мне нравится все от энергетики и умения аккуратно и деликатно
+									донести проблему и ее волшебных рук) Благодаря ее упорной работе, несмотря на сложную мою
+									кожу, мы добились отличных результатов, избавились от серьезных высыпаний и получили
+									здоровый внешний вид и спокойное состояние. Спасибо!
+								</div>
+								<div class="item-review-service__footer">
+									<a href="" class="item-review-service__btn button button_light">
+										<span>Подробнее</span>
+										<i>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+										</i>
+									</a>
+								</div>
+							</div>
+							<div class="reviews-service__item item-review-service">
+								<div class="item-review-service__top">
+									<div class="item-review-service__icon"></div>
+									<div class="item-review-service__title text">Анна, 35 лет</div>
+								</div>
+								<div class="item-review-service__text">
+									Танечка прекрасный специалист! Мне нравится все от энергетики и умения аккуратно и деликатно
+
+								</div>
+								<div class="item-review-service__footer">
+									<a href="" class="item-review-service__btn button button_light">
+										<span>Подробнее</span>
+										<i>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+										</i>
+									</a>
+								</div>
+							</div>
+							<div class="reviews-service__item item-review-service">
+								<div class="item-review-service__top">
+									<div class="item-review-service__icon"></div>
+									<div class="item-review-service__title text">Анна, 35 лет</div>
+								</div>
+								<div class="item-review-service__text">
+									Танечка прекрасный специалист! Мне нравится все от энергетики и умения аккуратно и деликатно
+
+								</div>
+								<div class="item-review-service__footer">
+									<a href="" class="item-review-service__btn button button_light">
+										<span>Подробнее</span>
+										<i>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+										</i>
+									</a>
+								</div>
+							</div>
+							<div class="reviews-service__item item-review-service">
+								<div class="item-review-service__top">
+									<div class="item-review-service__icon"></div>
+									<div class="item-review-service__title text">Анна, 35 лет</div>
+								</div>
+								<div class="item-review-service__text">
+									Танечка прекрасный специалист! Мне нравится все от энергетики и умения аккуратно и деликатно
+
+								</div>
+								<div class="item-review-service__footer">
+									<a href="" class="item-review-service__btn button button_light">
+										<span>Подробнее</span>
+										<i>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+										</i>
+									</a>
+								</div>
+							</div>
+							<div class="reviews-service__item item-review-service">
+								<div class="item-review-service__top">
+									<div class="item-review-service__icon"></div>
+									<div class="item-review-service__title text">Анна, 35 лет</div>
+								</div>
+								<div class="item-review-service__text">
+									Танечка прекрасный специалист! Мне нравится все от энергетики и умения аккуратно и деликатно
+
+								</div>
+								<div class="item-review-service__footer">
+									<a href="" class="item-review-service__btn button button_light">
+										<span>Подробнее</span>
+										<i>
+											<svg>
+												<use xlink:href="img/icons/icons.svg#arrow"></use>
+											</svg>
+										</i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="reviews-service__more">
+							<!-- button button_more для активации кнопки Показать еще -> Скрыть к  .posts__more add class _showmore-active-->
+							<button class="button button_more" type="button"><span>
+									Показать больше
+								</span>
+								<span>Скрыть</span>
+							</button>
+							<!--end button button_more  -->
+							<div class="more-block__pagination pagging">
+								<a href="" class="pagging__arrow pagging__arrow-prev">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+								</a>
+								<ul class="pagging__list">
+									<li>
+										<a href="" class="pagging__item _active">1</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">2</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">3</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">4</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">5</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">6</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">...</a>
+									</li>
+									<li>
+										<a href="" class="pagging__item">30</a>
+									</li>
+								</ul>
+								<a href="" class="pagging__arrow pagging__arrow-next">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#dropdown"></use>
+									</svg>
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__info">
+				<div class="container">
+					<div class="footer__top top-footer">
+						<a href="/" class="top-footer__logo logo"><img src="img/logo_f.svg" alt="Logo"></a>
+						<div class="top-footer__search">
+							<form action="#">
+								<div class="search-box">
+									<input class="search-box__input input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите запрос">
+									<button class="search-box__btn" type="submit">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#search"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer__menu menu-footer">
+						<div class="menu-footer__info">
+							<div class="menu-footer__info-top">
+								<div class="menu-footer__address">г. Барановичи ул. Мицкевича 12</div>
+								<div class="menu-footer__time">Ежедневно: с 9.00 до 20.00</div>
+								<a href="tel:+74994600013" class="menu-footer__tel">+7 499 460 00 13</a>
+								<div class="menu-footer__social social">
+									<a href="" class="social__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tg"></use>
+										</svg>
+									</a>
+									<a href="" class="social__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#vk"></use>
+										</svg>
+									</a>
+									<a href="" class="social__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#yuotube"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="menu-footer__info-bottom">
+								<p>© 2011—2025 ИП Чагина О.И.</p>
+								<a href="">Сайт разработан <u>Like<span>it</span>.pro</u></a>
+							</div>
+						</div>
+						<div class="menu-footer__nav">
+							<div class="menu-footer__col" data-spoilers="479.98">
+								<button class="menu-footer__title" data-spoiler type="button">Наши услуги</button>
+								<div class="menu-footer__body">
+									<ul class="menu-footer__list">
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Консультации
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Комбинированная чистка
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Пилинг
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Уходовые процедуры
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Массаж лица
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Массаж тела
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												SPA для тела
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												SPA для тела от SPAQUATORIA
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Уход за бровями
+											</a>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+							<div class="menu-footer__col" data-spoilers="479.98">
+								<button class="menu-footer__title" data-spoiler type="button">Каталог товаров</button>
+								<div class="menu-footer__body">
+									<ul class="menu-footer__list">
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Для лица</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Для волос</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Для тела</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Уход за губами</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Декоративная косметика</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Уход за полостью рта</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Наборы</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Живой кологен</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">Расчёски и&nbsp;аксессуары для волос</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Для лица
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Для волос
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Для тела
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Уход за губами
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Декоративная косметика
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Уход за полостью рта
+											</a>
+										</li>
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Наборы
+											</a>
+										</li>
+
+										<li class="menu-footer__item">
+											<a href="" class="menu-footer__link">
+												Расчёски и&nbsp;аксессуары для волос
+											</a>
+										</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__menu-info info-menu">
+				<div class="container">
+					<ul class="info-menu__list">
+						<li class="info-menu__item">
+							<a href="" class="info-menu__link">О нас</a>
+						</li>
+						<li class="info-menu__item">
+							<a href="" class="info-menu__link">Блог</a>
+						</li>
+						<li class="info-menu__item">
+							<a href="" class="info-menu__link">Косметологи</a>
+						</li>
+						<li class="info-menu__item">
+							<a href="" class="info-menu__link">Обучение</a>
+						</li>
+						<li class="info-menu__item">
+							<a href="" class="info-menu__link">Доставка и оплата</a>
+						</li>
+						<li class="info-menu__item">
+							<a href="" class="info-menu__link">Контакты</a>
+						</li>
+					</ul>
+					<div class="menu-footer menu-footer_mobile">
+						<div class="menu-footer__info-bottom">
+							<p>© 2011—2025 ИП Чагина О.И.</p>
+							<a href="">Сайт разработан <u>Like<span>it</span>.pro</u></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom bottom-footer">
+				<div class="container">
+					<div class="bottom-footer__payments">
+						<img src="img/payments/visa.webp" alt="Image">
+						<img src="img/payments/visa_sec.webp" alt="Image">
+						<img src="img/payments/master.webp" alt="Image">
+						<img src="img/payments/id_check.webp" alt="Image">
+						<img src="img/payments/belka.webp" alt="Image">
+						<img src="img/payments/belka_int.webp" alt="Image">
+						<img src="img/payments/bepaid.webp" alt="Image">
+						<img src="img/payments/sams_pay.webp" alt="Image">
+						<img src="img/payments/g-pay.webp" alt="Image">
+					</div>
+					<div class="bottom-footer__text">
+						<p>Индивидуальный предприниматель Чагина Ольга Ивановна УНП-291819558</p>
+						<p>Свидетельство о государственной регистрации индивидуального предпринимателя №291819558 от
+							05.05.2023г. выдано Барановичским горисполкомом 225410 РБ Брестская область, г.Барановичи, ул.
+							Текстильная, д.8, кв.37</p>
+						<p>р/с BY29BPSB 3013 1916 4801 9933 0000 в ОАО «Сбер Банк» БИК BPSBBY2X Тел: +37529-7294633</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="menu-fixed">
+			<div class="menu-fixed__item">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#logo"></use>
+				</svg>
+				Главная
+			</div>
+			<div class="menu-fixed__item">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#catalog"></use>
+				</svg>
+				Каталог
+			</div>
+			<div class="menu-fixed__item">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#cart"></use>
+				</svg>
+				Корзина
+			</div>
+			<div class="menu-fixed__item">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#heart"></use>
+				</svg>
+				Избранное
+			</div>
+			<div class="menu-fixed__item">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#user"></use>
+				</svg>
+				Профиль
+			</div>
+		</div>
+		<div id="cons-pop" class="modal modal_lg show">
+			<div class="modal__inner">
+				<div class="modal__body">
+					<button type="button" class="modal__close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#del"></use>
+						</svg>
+					</button>
+					<div class="modal__container">
+						<div class="modal__form">
+							<div class="modal__title title title_h2">Записаться
+								на&nbsp;консультацию
+							</div>
+							<div class="modal__text">
+								<strong> Оставьте свои контакты для записи.</strong>
+								Наши менеджеры свяжутся с&nbsp;вами в&nbsp;ближайшее время.
+							</div>
+							<div class="form form_popup">
+								<form action="">
+									<div class="form__inner">
+										<div class="form__row">
+											<input class="input" autocomplete="off" type="text" name="form[]" placeholder="Ваше имя ">
+										</div>
+										<div class="form__row">
+											<input class="input" autocomplete="off" type="text" name="form[]" placeholder="Телефон">
+										</div>
+										<div class="form__row">
+											<input class="input" autocomplete="off" type="text" name="form[]" placeholder="E-mail">
+										</div>
+										<div class="form__row">
+											<button class="form__button button button_black" type="submit">
+												Отправить
+											</button>
+										</div>
+										<div class="form__row">
+											<div class="form__text">
+												Нажимая кнопку "Отправить", вы соглашаетесь с <a href="">пользовательским
+												соглашением</a> и <a href="">политикой конфиденциальности</a>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/common.js?_v=1.2"></script>
+	<script src="js/select.js?_v=1.2"></script>
+</body>
+
+</html>

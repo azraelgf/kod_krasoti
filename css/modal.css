@@ -1,0 +1,192 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6666666667);
+    width: 100%;
+    height: 100%;
+    z-index: 10000000000;
+    overflow-y: auto;
+    padding: 2.5rem 1.25rem;
+    box-sizing: border-box
+}
+.modal.show {
+    display: flex
+}
+.modal__inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 65.875rem;
+    background: #fff;
+    transition: .3s all ease;
+    border-radius: .9375rem;
+    margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 3.75rem
+}
+.modal_lg .modal__inner {
+    max-width: 43.75rem
+}
+.modal_success .modal__inner {
+    max-width: 43.75rem;
+    padding: 2.5rem 3.75rem
+}
+.modal__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem
+}
+.modal__close svg {
+    width: 100%;
+    height: 100%
+}
+.modal__container {
+    max-width: 100%;
+    padding: 0
+}
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 28.75rem;
+    margin: 0 auto
+}
+.modal__title {
+    text-align: center;
+    max-width: 27.5rem
+}
+.modal__schedule-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.25rem
+}
+.modal__text {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4
+}
+.modal__text span {
+    font-weight: 600
+}
+.modal__text:not(:last-child) {
+    margin-bottom: 1.25rem
+}
+.modal__form_rating .modal__text:not(:last-child) {
+    margin-bottom: 0
+}
+.modal__text strong {
+    display: block;
+    font-weight: 600
+}
+.modal__success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem
+}
+.modal__time {
+    font-size: .875rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    padding: .4375rem 1.5625rem;
+    background-color: var(--accent);
+    color: #fff
+}
+.modal__success .modal__title {
+    max-width: 100%
+}
+.modal__success-icon {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    color: var(--accent)
+}
+.modal__success-icon svg {
+    width: 100%;
+    height: 100%
+}
+.item-review-service_popup .top-section__title {
+    font-size: 1.5rem;
+    font-weight: 500
+}
+.item-review-service_popup .top-section {
+    margin-bottom: 1.25rem
+}
+.form.form_popup {
+    max-width: 28.75rem
+}
+.form.form_popup .form__inner {
+    gap: 1.25rem;
+    justify-content: center;
+    text-align: center
+}
+.form.form_popup .input {
+    border-color: var(--primary);
+    font-size: 1rem
+}
+.modal__success .title.title_h2 {
+    font-size: 1.5rem
+}
+.modal__beige.beige-light {
+    margin-top: .375rem;
+    font-size: .875rem
+}
+.form_popup textarea {
+    padding: 1rem 1.25rem;
+    min-height: 8.125rem
+}
+.form_popup .input:focus {
+    outline: 0
+}
+@media (max-width:61.99875em) {
+    .modal__inner {
+        padding: 1.875rem 1.25rem
+    }
+    .modal_success .modal__inner {
+        padding: 1.875rem 1.25rem
+    }
+    .modal__success-icon {
+        width: 4.0625rem;
+        height: 4.0625rem
+    }
+}
+@media (max-width:48.12375em) {
+    .modal__success .title.title_h2 {
+        font-size: 1.25rem
+    }
+}
+@media (max-width:29.99875em) {
+    .modal__title {
+        max-width: 16.25rem
+    }
+    .modal__text:not(:last-child) {
+        margin-bottom: .625rem
+    }
+    .modal__success {
+        gap: 1rem
+    }
+    .modal__success-icon {
+        width: 3.4375rem;
+        height: 3.4375rem
+    }
+    .form.form_popup .form__inner {
+        gap: 1rem
+    }
+    .form.form_popup .form__text {
+        font-size: .75rem
+    }
+    .modal__success .title.title_h2 {
+        font-size: 1.125rem
+    }
+}
